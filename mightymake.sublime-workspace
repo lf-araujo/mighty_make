@@ -100,10 +100,26 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "",
+		"height": 112.0,
+		"last_filter": "push",
 		"selected_items":
 		[
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add All"
+			],
+			[
+				"git ig",
+				"Git: Update Project Ignored Files"
+			],
 			[
 				"gitig",
 				"Git: Update Project Ignored Files"
@@ -159,10 +175,6 @@
 			[
 				"CLOS",
 				"Project: Close"
-			],
-			[
-				"push",
-				"Git: Push Current Branch"
 			],
 			[
 				"git comm",
@@ -223,14 +235,6 @@
 			[
 				"men",
 				"View: Toggle Menu"
-			],
-			[
-				"comm",
-				"Git: Commit"
-			],
-			[
-				"add",
-				"Git: Add All"
 			],
 			[
 				"remove",
@@ -489,7 +493,7 @@
 				"Evernote Settings: User"
 			]
 		],
-		"width": 458.0
+		"width": 485.0
 	},
 	"console":
 	{
@@ -511,8 +515,13 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Coding/bash/mighty_make"
+	],
 	"file_history":
 	[
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Coding/bash/mighty_make/.gitignore",
 		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/2016-01-04 Submission Psychiatric Research - Neuroimaging/Review answer/Makefile",
 		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/2016-01-04 Submission Psychiatric Research - Neuroimaging/Review answer/source/Review answer.md",
 		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/output/summary.txt",
@@ -639,8 +648,7 @@
 		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/11_Psychiatry_As_Special_Case_Of_Cognitive_Science.md",
 		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/Sch moderates structural changes on IQ.R",
 		"/home/luis/.config/sublime-text-3/Packages/User/Package Control.cache/01524fae79697630d0454ba3fabd9414",
-		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/03_abstract.md",
-		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/2016 SPECT SEP/Report with seven patients, four analyses.md"
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/03_abstract.md"
 	],
 	"find":
 	{
@@ -658,6 +666,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"reference",
 			"escol1",
 			"\"",
 			"!= 0",
