@@ -1,0 +1,915 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"descri",
+				"descriptivestats"
+			],
+			[
+				"sem",
+				"semWellComb"
+			],
+			[
+				"wri",
+				"write_descriptive_stats"
+			],
+			[
+				"file",
+				"file_name"
+			],
+			[
+				"semW",
+				"semWellComb"
+			],
+			[
+				"pa",
+				"packages"
+			],
+			[
+				"desc",
+				"descriptiveStats"
+			],
+			[
+				"this",
+				"thist1"
+			],
+			[
+				"lh_",
+				"lh_inferiorparietal_area"
+			],
+			[
+				"lh",
+				"lh_medialorbitofrontal_area"
+			],
+			[
+				"Phil",
+				"PhilSci"
+			],
+			[
+				"FIL",
+				"FILFILES"
+			],
+			[
+				"latex",
+				"latex-engine"
+			],
+			[
+				"pandoc",
+				"pandoc-citeproc"
+			],
+			[
+				"late",
+				"latex-engine"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Makefile",
+			"settings":
+			{
+				"buffer_size": 3195,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Makefile/Make.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/Makefile/Make.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"gitig",
+				"Git: Update Project Ignored Files"
+			],
+			[
+				"close",
+				"Project: Close"
+			],
+			[
+				"clo",
+				"Convert Case: Lower Case"
+			],
+			[
+				"searc",
+				"Evernote: Search Note"
+			],
+			[
+				"clos",
+				"Project: Close"
+			],
+			[
+				"pando",
+				"Pandoc"
+			],
+			[
+				"mard",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"updat",
+				"Evernote: Update Evernote Note"
+			],
+			[
+				"search",
+				"Evernote: Search Note"
+			],
+			[
+				"replr",
+				"SublimeREPL: R"
+			],
+			[
+				"r conso",
+				"Set Syntax: R Console"
+			],
+			[
+				"r",
+				"Set Syntax: R"
+			],
+			[
+				"R",
+				"Set Syntax: R"
+			],
+			[
+				"CLOS",
+				"Project: Close"
+			],
+			[
+				"push",
+				"Git: Push Current Branch"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add All"
+			],
+			[
+				"repl r",
+				"SublimeREPL: R"
+			],
+			[
+				"upd",
+				"Evernote: Update Evernote Note"
+			],
+			[
+				"sear",
+				"Evernote: Search Note"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"update",
+				"Evernote: Update Evernote Note"
+			],
+			[
+				"send",
+				"Evernote: Send to Evernote as new note"
+			],
+			[
+				"new",
+				"Evernote: New empty note"
+			],
+			[
+				"upda",
+				"Evernote: Update Evernote Note"
+			],
+			[
+				"chec",
+				"LanguageTool: Check Text"
+			],
+			[
+				"new e",
+				"Evernote: New empty note"
+			],
+			[
+				"distractionless: Documentation ",
+				"distractionless: Documentation (English)"
+			],
+			[
+				"men",
+				"View: Toggle Menu"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add All"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"git ",
+				"Git: Push"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git pu",
+				"Git: Push"
+			],
+			[
+				"pand",
+				"Pandoc"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"side bar",
+				"View: Toggle Side Bar"
+			],
+			[
+				"toggle ",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"toggl",
+				"View: Toggle Side Bar"
+			],
+			[
+				"tabs",
+				"View: Toggle Tabs"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"pandoc",
+				"Pandoc"
+			],
+			[
+				"check",
+				"LanguageTool: Check Text"
+			],
+			[
+				"langua",
+				"LanguageTool: Clear Problems"
+			],
+			[
+				"start",
+				"LanguageTool: Start Local Server"
+			],
+			[
+				"Check",
+				"LanguageTool: Check Text (Local Server)"
+			],
+			[
+				"start loca",
+				"LanguageTool: Start Local Server"
+			],
+			[
+				"new note",
+				"Evernote: Send to Evernote as new note"
+			],
+			[
+				"dele",
+				"Evernote: Delete Note"
+			],
+			[
+				"languagetool",
+				"LanguageTool: Clear Problems"
+			],
+			[
+				"language",
+				"LanguageTool: Change Language"
+			],
+			[
+				"send as",
+				"Evernote: Send to Evernote as new note"
+			],
+			[
+				"clear",
+				"LanguageTool: Clear Problems"
+			],
+			[
+				"chang",
+				"LanguageTool: Change Language"
+			],
+			[
+				"send a",
+				"Evernote: Send to Evernote as new note"
+			],
+			[
+				"toggle",
+				"View: Toggle Menu"
+			],
+			[
+				"send ",
+				"Evernote: Send to Evernote as new note"
+			],
+			[
+				"new no",
+				"Evernote: New empty note"
+			],
+			[
+				"",
+				"Evernote: Send to Evernote as new note"
+			],
+			[
+				"search ",
+				"Evernote: Search Note"
+			],
+			[
+				"delet",
+				"Evernote: Delete Note"
+			],
+			[
+				"delete",
+				"Evernote: Delete Note"
+			],
+			[
+				"\\",
+				"Snippet: #!/usr/bin/env"
+			],
+			[
+				"github",
+				"GitHub: Blame (master)"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"docx",
+				"Pandoc: Convert a Pandoc file to DocX"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"pdf",
+				"Pandoc: Convert a Pandoc file to PDF"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"haskel",
+				"Set Syntax: Haskell"
+			],
+			[
+				"lang",
+				"LanguageTool: Change Language"
+			],
+			[
+				"languag",
+				"LanguageTool: Apply Suggested Correction(s)"
+			],
+			[
+				"mardk",
+				"Set Syntax: Markdown"
+			],
+			[
+				"evernote",
+				"Evernote: Send to Evernote as new note"
+			],
+			[
+				"markd",
+				"Set Syntax: Markdown"
+			],
+			[
+				"markdo",
+				"Set Syntax: Markdown"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown"
+			],
+			[
+				"pandoc pdf",
+				"Pandoc: Convert a Pandoc file to PDF"
+			],
+			[
+				"next",
+				"LanguageTool: Next Problem"
+			],
+			[
+				"mar",
+				"Set Syntax: Markdown"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown + Critic"
+			],
+			[
+				"crit",
+				"Set Syntax: Critic"
+			],
+			[
+				"critic",
+				"Set Syntax: Markdown + Critic"
+			],
+			[
+				"criti",
+				"Set Syntax: Critic"
+			],
+			[
+				"comment",
+				"Toggle Comment"
+			],
+			[
+				"markdwo",
+				"Set Syntax: Markdown"
+			],
+			[
+				"cri",
+				"Set Syntax: Critic"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"lan",
+				"LanguageTool: Check Text"
+			],
+			[
+				"cite",
+				"Citer: Search"
+			],
+			[
+				"Critic",
+				"Set Syntax: Critic"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ever",
+				"Evernote Settings: User"
+			]
+		],
+		"width": 458.0
+	},
+	"console":
+	{
+		"height": 117.0,
+		"history":
+		[
+			"sys.version_info",
+			"sys.version",
+			"import sys",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/2016-01-04 Submission Psychiatric Research - Neuroimaging/Review answer/Makefile",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/2016-01-04 Submission Psychiatric Research - Neuroimaging/Review answer/source/Review answer.md",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/output/summary.txt",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/input/cases.aseg.vol.table",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/outputreview/source/Review answer.md",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/outputreview/Review answer.md",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/outputreview/CrossTable.txt",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/output/summaryMIMIC.txt",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/output/reflectivestats.txt",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/output/anovaMIMICvRefl.txt",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/2017-04-21-paper-revision.R",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Coding/R/sempsychiatry/R/write-descriptive-stats.R",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/MODERATION Structural imaging and cognition/2017-4-19-moderation model.R",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/Sch moderates structural changes on IQ.R",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/outputreview/summary.txt",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/outputreview/ReflSummary.txt",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/MODERATION Structural imaging and cognition/output/descriptivestats.txt",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Coding/R/sempsychiatry/R/loadfreesurfer.R",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/MEDIATION Structural imaging and cognition/Analysis/2017-04-12 Mediation model.R",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/MODERATION Structural imaging and cognition/output/ReflSummary.csv",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/MODERATION Structural imaging and cognition/output/temp.txt",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Coding/R/sempsychiatry/R/dependencies.R",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Structural imaging and cognition MEDIATION MODEL/Analysis/2017-04-12 Mediation model.R",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/MODERATION Structural imaging and cognition/output/coefficients.txt",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/MODERATION Structural imaging and cognition/output/factorloadings.txt",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/MODERATION Structural imaging and cognition/output/normalityhzTest.txt",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Structural imaging and cognition MEDIATION MODEL/Analysis/output/mediationfitmeasures.csv",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Structural imaging and cognition MEDIATION MODEL/Analysis/output/descriptivestats.txt",
+		"/home/luis/Dropbox/Documentos/Coding/R/sempsychiatry/R/loadfreesurfer.R",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Structural imaging and cognition MEDIATION MODEL/Analysis/output/mediationsummary.csv",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Structural imaging and cognition MEDIATION MODEL/Analysis/output/normalityhzTest.csv",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Coding/R/sempsychiatry/R/transform-divide-thousand.R",
+		"/tmp/swift/Package.swift",
+		"/home/luis/Dropbox/Documentos/Coding/R/sempsychiatry/R/loadfiles.R",
+		"/home/luis/Dropbox/Documentos/Coding/R/documenting commands.R",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/00_metadata.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Curriculum/markdown-cv/source/cv.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Structural imaging and cognition MEDIATION MODEL/Analysis/Only80/2017-04-12 Mediation model (budgie-remix's conflicted copy 2017-04-13).R",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Structural imaging and cognition MEDIATION MODEL/Analysis/Only80/2017-04-12 Mediation model.R",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Structural imaging and cognition MEDIATION MODEL/Analysis/Only80/2017-04-12 Mediation model (554D-117972-W7's conflicted copy 2017-04-13).R",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/07_SEM and levels.md",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/06_methods.md",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/08_mediation.md",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/09_DTI_moderation.md",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/11_Psychiatry_As_Special.md",
+		"/tmp/bib.bib",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/07_SEM and levels.md",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/14_appendix.md",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/00_metadata.md",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/01_frontmatter.md",
+		"/home/budgie-remix/.config/sublime-text-3/Packages/SublimeREPL/config/Swift/Default.sublime-commands",
+		"/home/budgie-remix/.config/sublime-text-3/Packages/SublimeREPL/config/Swift/Main.sublime-menu",
+		"/usr/share/dnscrypt-proxy/dnscrypt-resolvers.csv",
+		"/etc/default/dnscrypt-proxy",
+		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/05_intro.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/15_references.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/08_mediation.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/14_appendix.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/12_conclusion.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/06_methods.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/NUSDAST/mediation model with genotypes.R",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/NUSDAST/moderation model multigroup.R",
+		"/home/luis/Dropbox/Documentos/Coding/R/sempsychiatry/R/anonym.R",
+		"/home/luis/Dropbox/Documentos/Coding/R/sempsychiatry/R/dependencies.R",
+		"/home/luis/Dropbox/Documentos/Coding/R/sempsychiatry/R/genotypestoordinals.R",
+		"/home/luis/Dropbox/Documentos/Coding/R/sempsychiatry/R/remove-zero-cols.R",
+		"/home/luis/Dropbox/Documentos/Coding/R/sempsychiatry/R/transform-divide-thousand.R",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/Makefile",
+		"/home/luis/.config/sublime-text-3/Packages/User/Pandoc.sublime-settings",
+		"/home/luis/Dropbox/Documentos/Shared between Jacyra-Luis/Pandoquer/Makefile",
+		"/tmp/env.txt",
+		"/home/luis/Documentos/lf-araujo.github.io/assets/css/main.css",
+		"/home/luis/Documentos/onepage/_config.yml",
+		"/home/luis/Documentos/lf-araujo.github.io/css/base.scss",
+		"/home/luis/Modelos/Makefile",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/README.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/11_Psychiatry_As_Special.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/05_intro.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/01_frontmatter.md",
+		"/home/luis/Dropbox/Documentos/Coding/Genie/texteditor functional/Makefile",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/CAPÍTULO Psiquiatria como ciência cognitiva/psq as cog.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Structural imaging and cognition MEDIATION MODEL/Analysis/2016-04-29 Modelling IQ - EDUCATION MEDIATION.R",
+		"/etc/environment",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Structural imaging and cognition MEDIATION MODEL/Analysis/2016-05-09 Modelling IQ - structural neuroimaging.R",
+		"/home/luis/Dropbox/Documentos/Coding/LaTeX/tufte.cls",
+		"/home/luis/Dropbox/Documentos/Coding/autocorrimp.py",
+		"/home/luis/Dropbox/Documentos/Coding/everpadsync.sh",
+		"/home/luis/Dropbox/Documentos/Coding/scaling down.md",
+		"/tmp/mozilla_luis0/shotwell-0.25.3.news",
+		"/tmp/torrent-stream/2546b1857d1680930b9371b4b054567eda31e2c5/Ghost in the Shell 2 Innocence (2004) 720p BluRay Ita Jap Ac3 x265-NAHOM/info.txt",
+		"/home/luis/.config/sublime-text-3/Packages/MarkdownEditing/Bold and Italic Markers.tmPreferences",
+		"/home/luis/.config/psd/psd.conf",
+		"/tmp/teste.md",
+		"/tmp/teste.tex",
+		"/home/luis/.megafuse",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/07_moderation.md",
+		"/home/luis/.pandoc/README.markdown",
+		"/tmp/test.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/.08_mediation.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/Makefile~",
+		"/tmp/acronyms.py",
+		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/01_frontmatter.md",
+		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/05_intro.md",
+		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/12_conclusion.md",
+		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/Makefile",
+		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/00_metadata.md",
+		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/acronyms.py",
+		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/06_methods.md",
+		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/09_DTI_moderation.md",
+		"/C/Users/554UU-lfernado/Desktop/Nusdast/CC0212_0/FreeSurfer_v5-3-0/stats/lh.aparc.stats",
+		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/11_Psychiatry_As_Special.md",
+		"/media/elementary/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/06_intro.md",
+		"/media/elementary/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/00_metadata.md",
+		"/media/elementary/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/10_RDoC_shift.md",
+		"/media/elementary/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/11_Psychiatry_As_Special.md",
+		"/home/luis/temp.md",
+		"/tmp/Butter/70cfcd2e3623f221ec82314f95f75a4ac5ba671e/Snowden.2016.720p.WEBRip.x264.AAC-ETRG/Torrent Downloaded From ExtraTorrent.cc.vtt",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/09_methods.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/04_acknowled.md",
+		"/tmp/temp.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/10_RDoC_shift.md",
+		"/home/luis/.config/sublime-text-3/Packages/User/LanguageTool.sublime-settings",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/14_appendix2.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/11_Psychiatry_As_Special_Case_Of_Cognitive_Science.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/Sch moderates structural changes on IQ.R",
+		"/home/luis/.config/sublime-text-3/Packages/User/Package Control.cache/01524fae79697630d0454ba3fabd9414",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/03_abstract.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/2016 SPECT SEP/Report with seven patients, four analyses.md"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 88.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"escol1",
+			"\"",
+			"!= 0",
+			":= 0",
+			"marr",
+			"Table",
+			"List",
+			"Table",
+			"Listing",
+			"marr",
+			"<em",
+			".\n",
+			"Red",
+			"acro",
+			"mvn",
+			"Standardized coefficients for each indicator per group",
+			"multipl",
+			"lessons learned",
+			"TOMM",
+			"par",
+			"confirmatory bias",
+			"-@",
+			"lies",
+			"For [@",
+			"For (@Mi",
+			"recent book",
+			"-@",
+			"Michael ",
+			"Gerrans",
+			"Table",
+			"\"{\"*\"}\"",
+			"{*}",
+			"analytical",
+			">",
+			"<",
+			"Psychiatric",
+			"bibliography",
+			"type",
+			"turn out",
+			"for",
+			"biblatex",
+			"biblates",
+			"boxes",
+			"margins",
+			"verbatim-in-note",
+			"verbatin-in-note",
+			"code",
+			"if(dir",
+			"mainfont",
+			"documentclass",
+			"margin",
+			"\n    "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			" "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3195,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								342,
+								342
+							]
+						],
+						"settings":
+						{
+							"draw_centered": false,
+							"draw_indent_guides": true,
+							"draw_white_space": "selection",
+							"fold_buttons": true,
+							"gutter": true,
+							"line_numbers": true,
+							"rulers":
+							[
+							],
+							"scroll_past_end": true,
+							"syntax": "Packages/Makefile/Makefile.sublime-syntax",
+							"word_wrap": "auto",
+							"wrap_width": 0
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 134.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"output.languagetool":
+	{
+		"height": 94.0
+	},
+	"pinned_build_system": "Packages/Makefile/Make.sublime-build",
+	"project": "mightymake.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "the",
+		"selected_items":
+		[
+			[
+				"the",
+				"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/thesis.sublime-project"
+			],
+			[
+				"",
+				"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/psyresearchmoderation.sublime-project"
+			],
+			[
+				"sem",
+				"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Coding/R/sempsychiatry/sempsyhiatry.sublime-project"
+			],
+			[
+				"cv",
+				"~/Dropbox/Documentos/Psiquiatria/Curriculum/markdown-cv/cv.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"dfw_mode": true,
+		"dfw_mode_prestine":
+		{
+			"draw_centered": false,
+			"draw_indent_guides": true,
+			"draw_white_space": "selection",
+			"fold_buttons_vis": true,
+			"gutter_vis": true,
+			"line_numbers_vis": true,
+			"menu_vis": true,
+			"minimap_vis": false,
+			"rulers":
+			[
+			],
+			"side_bar_vis": true,
+			"status_bar_vis": true,
+			"tabs_vis": true,
+			"wrap_width": 0
+		},
+		"last_automatic_layout":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		]
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 226.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

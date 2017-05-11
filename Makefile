@@ -14,6 +14,10 @@ ifeq ($(shell test -e "$(STYLEDIR)/template.tex" && echo -n yes),yes)
 	TEXTEMPLATE = "--template=$(STYLEDIR)/template.tex"
 endif
 
+ifeq ($(shell test -e "$(STYLEDIR)/reference.docx" && echo -n yes),yes)
+	DOCXTEMPLATE = "--reference-docx=$(STYLEDIR)/reference.docx"
+endif
+
 help:
 
 	@echo ' 																	  '
