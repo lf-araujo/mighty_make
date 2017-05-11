@@ -30,6 +30,7 @@ help:
 	@echo '   make docx                        generate a Docx file 			  '
 	@echo '   make tex                         generate a Latex file 			  '
 	@echo '   make all                         generate all files                 '
+	@echo '   make update               update the makefile to last version       '
 	@echo '   make                             will fallback to PDF               '
 	@echo ' 																	  '
 	@echo 'It implies some directories in the filesystem: source, output and style'
@@ -61,10 +62,11 @@ tex:
 
 docx:
 	pandoc "$(INPUTDIR)"/*.md \
-	-o "$(OUTPUTDIR)/$(NAME).docx" \
 	--filter pandoc-crossref \
 	--filter pandoc-citeproc \
-	--toc
+	$(DOCXTEMPLATE) \
+	--toc \
+	-o "$(OUTPUTDIR)/$(NAME).docx"
 	xdg-open "$(OUTPUTDIR)/$(NAME).docx"
 
 html:
@@ -98,6 +100,9 @@ prepare:
 	mkdir "output"
 	mkdir "source"
 	mkdir "style"
+
+update:
+	wget http://bit.ly/2oOlPXY -O Makefile
 
 clean:
 	rm -f "$(OUTPUTDIR)/" *.md *.html *.pdf *.tex *.docx
