@@ -102,7 +102,7 @@ prepare:
 	mkdir "style"
 
 update:
-	wget http://bit.ly/2oOlPXY -O Makefile
+	wget https://tinyurl.com/MightMake -O Makefile
 
 clean:
 	rm -f "$(OUTPUTDIR)/" *.md *.html *.pdf *.tex *.docx
