@@ -21,7 +21,7 @@ endif
 help:
 
 	@echo ' 																	  '
-	@echo 'Makefile for typography with pandoc                                    '
+	@echo 'Makefile for automated typography using pandoc                         '
 	@echo '                                                                       '
 	@echo 'Usage:                                                                 '
 	@echo '   make prepare            first time use, setting the directories     '
@@ -35,6 +35,7 @@ help:
 	@echo ' 																	  '
 	@echo 'It implies some directories in the filesystem: source, output and style'
 	@echo 'It also implies that the bibliography will be defined via the yaml	  '
+	@echo 'Add your custom filters to the style directory			     		  '
 	@echo ' 																	  '
 	@echo 'Depends on pandoc-citeproc and pandoc-crossref						  '
 	@echo 'Get local templates with: pandoc -D latex/html/etc	         		  '
@@ -102,7 +103,7 @@ prepare:
 	mkdir "style"
 
 update:
-	wget https://tinyurl.com/MightMake -O Makefile
+	wget http://tiny.cc/mighty_make -O Makefile
 
 clean:
 	rm -f "$(OUTPUTDIR)/" *.md *.html *.pdf *.tex *.docx
