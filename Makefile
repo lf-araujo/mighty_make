@@ -21,21 +21,22 @@ endif
 help:
 
 	@echo ' 																	  '
-	@echo 'Makefile for automated typography using pandoc                         '
+	@echo 'Makefile for automated typography using pandoc.                         '
+	@echo 'Version 1.0                        '
 	@echo '                                                                       '
 	@echo 'Usage:                                                                 '
-	@echo '   make prepare            first time use, setting the directories     '
-	@echo '   make html                        generate a web version             '
-	@echo '   make pdf                         generate a PDF file  			  '
-	@echo '   make docx                        generate a Docx file 			  '
-	@echo '   make tex                         generate a Latex file 			  '
-	@echo '   make all                         generate all files                 '
-	@echo '   make update               update the makefile to last version       '
-	@echo '   make                             will fallback to PDF               '
+	@echo '   make prepare    first time use, setting the directories     '
+	@echo '   make html       generate a web version             '
+	@echo '   make pdf        generate a PDF file  			  '
+	@echo '   make docx       generate a Docx file 			  '
+	@echo '   make tex        generate a Latex file 			  '
+	@echo '   make beamer     generate a beamer presentation 			  '
+	@echo '   make all        generate all files                 '
+	@echo '   make update     update the makefile to last version       '
+	@echo '   make            will fallback to PDF               '
 	@echo ' 																	  '
 	@echo 'It implies some directories in the filesystem: source, output and style'
 	@echo 'It also implies that the bibliography will be defined via the yaml	  '
-	@echo 'Add your custom filters to the style directory			     		  '
 	@echo ' 																	  '
 	@echo 'Depends on pandoc-citeproc and pandoc-crossref						  '
 	@echo 'Get local templates with: pandoc -D latex/html/etc	         		  '
@@ -43,14 +44,14 @@ help:
 
 
 
-all : pdf tex docx html epub
+all : tex docx html epub pdf
 
 
 pdf:
 	pandoc "$(INPUTDIR)/"*.md \
 	-o "$(OUTPUTDIR)/$(NAME).pdf" \
 	$(TEXTEMPLATE) \
-	$(TEXFLAGS)
+	$(TEXFLAGS) 2>pandoc.log
 	xdg-open "$(OUTPUTDIR)/$(NAME).pdf"
 
 tex:
@@ -59,7 +60,6 @@ tex:
 	--filter pandoc-citeproc \
 	-o "$(OUTPUTDIR)/$(NAME).tex" \
 	--latex-engine=xelatex
-	xdg-open "$(OUTPUTDIR)/$(NAME).tex"
 
 docx:
 	pandoc "$(INPUTDIR)"/*.md \
@@ -68,7 +68,6 @@ docx:
 	$(DOCXTEMPLATE) \
 	--toc \
 	-o "$(OUTPUTDIR)/$(NAME).docx"
-	xdg-open "$(OUTPUTDIR)/$(NAME).docx"
 
 html:
 	pandoc "$(INPUTDIR)"/*.md \
@@ -83,7 +82,6 @@ html:
 	rm -rf "$(OUTPUTDIR)/source"
 	mkdir "$(OUTPUTDIR)/source"
 	cp -r "$(INPUTDIR)/figures" "$(OUTPUTDIR)/source/figures"
-	xdg-open "$(OUTPUTDIR)/$(NAME).html"
 
 epub:
 	pandoc "$(INPUTDIR)"/*.md \
@@ -95,7 +93,14 @@ epub:
 	rm -rf "$(OUTPUTDIR)/source"
 	mkdir "$(OUTPUTDIR)/source"
 	cp -r "$(INPUTDIR)/figures" "$(OUTPUTDIR)/source/figures"
-	xdg-open "$(OUTPUTDIR)/$(NAME).epub"
+
+beamer:
+	pandoc "$(INPUTDIR)/"*.md \
+	-t beamer \
+	-o "$(OUTPUTDIR)/$(NAME).pdf" \
+	$(TEXTEMPLATE) \
+	$(TEXFLAGS) 2>pandoc.log
+	xdg-open "$(OUTPUTDIR)/$(NAME).pdf"
 
 prepare:
 	mkdir "output"

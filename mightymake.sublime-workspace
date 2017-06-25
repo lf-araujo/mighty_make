@@ -71,8 +71,16 @@
 			"file": "Makefile",
 			"settings":
 			{
-				"buffer_size": 3349,
+				"buffer_size": 3417,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 2143,
 				"line_ending": "Unix"
 			}
 		}
@@ -100,12 +108,12 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 112.0,
-		"last_filter": "push",
+		"height": 392.0,
+		"last_filter": "pus",
 		"selected_items":
 		[
 			[
-				"push",
+				"pus",
 				"Git: Push"
 			],
 			[
@@ -117,8 +125,12 @@
 				"Git: Add All"
 			],
 			[
-				"pus",
+				"push",
 				"Git: Push"
+			],
+			[
+				"pull",
+				"Git: Pull"
 			],
 			[
 				"git ig",
@@ -497,7 +509,7 @@
 				"Evernote Settings: User"
 			]
 		],
-		"width": 458.0
+		"width": 467.0
 	},
 	"console":
 	{
@@ -521,7 +533,7 @@
 	},
 	"expanded_folders":
 	[
-		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Coding/bash/mighty_make"
+		"/home/luis/Dropbox/Documentos/Coding/bash/mighty_make"
 	],
 	"file_history":
 	[
@@ -741,7 +753,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -750,19 +762,27 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3349,
+						"buffer_size": 3417,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3248,
-								3248
+								0,
+								0
 							]
 						],
 						"settings":
 						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "makefile"
+							},
 							"draw_centered": false,
 							"draw_indent_guides": true,
 							"draw_white_space": "selection",
@@ -779,6 +799,54 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2143,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								914,
+								914
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "markdown extended"
+							},
+							"draw_centered": false,
+							"draw_indent_guides": true,
+							"draw_white_space": "selection",
+							"fold_buttons": true,
+							"gutter": true,
+							"line_numbers": true,
+							"rulers":
+							[
+							],
+							"scroll_past_end": true,
+							"syntax": "Packages/Markdown Extended/Syntaxes/Markdown Extended.sublime-syntax",
+							"word_wrap": "auto",
+							"wrap_width": 0
+						},
+						"translation.x": 0.0,
+						"translation.y": 73.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
