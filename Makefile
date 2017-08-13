@@ -1,28 +1,31 @@
 .DEFAULT_GOAL := pdf
 
-INPUTDIR=$(CURDIR)/source
-OUTPUTDIR=$(CURDIR)/output
-STYLEDIR=$(CURDIR)/style
-NAME = $(notdir $(shell basename "$(CURDIR)"))
+MD = $(wildcard source/*.md)
+PDF = output/$(notdir $(CURDIR)).pdf
+TEX = output/$(notdir $(CURDIR)).tex
+DOCX = output/$(notdir $(CURDIR)).docx
+HTML5 = output/$(notdir $(CURDIR)).html
+EPUB = output/$(notdir $(CURDIR)).epub
+BEAMER = output/$(notdir $(CURDIR))-presentation.pdf
 
 FILFILES = $(wildcard style/*.py)
+FILTERS := $(foreach FILFILES, $(FILFILES), --filter $(FILFILES))
+TEXFLAGS = -F pandoc-crossref -F pandoc-citeproc --latex-engine=xelatex
 
-FILTER := $(foreach FILFILES, $(FILFILES), --filter $(FILFILES))
-TEXFLAGS = --filter pandoc-crossref --filter pandoc-citeproc $(FILTER) --latex-engine=xelatex
-
-ifeq ($(shell test -e "$(STYLEDIR)/template.tex" && echo -n yes),yes)
-	TEXTEMPLATE = "--template=$(STYLEDIR)/template.tex"
+ifneq ("$(wildcard style/template.tex)","")
+	TEXTEMPLATE := "--template=style/template.tex"
 endif
-
-ifeq ($(shell test -e "$(STYLEDIR)/reference.docx" && echo -n yes),yes)
-	DOCXTEMPLATE = "--reference-docx=$(STYLEDIR)/reference.docx"
+ifneq ("$(wildcard style/reference.docx)","")
+	DOCXTEMPLATE := "--reference-docx=style/reference.docx"
+endif
+ifneq ("$(wildcard style/style.css)","")
+	CSS := "--include-in-header=style/style.css"
 endif
 
 help:
-
 	@echo ' 																	  '
 	@echo 'Makefile for automated typography using pandoc.                         '
-	@echo 'Version 1.0                        '
+	@echo 'Version 1.1                        '
 	@echo '                                                                       '
 	@echo 'Usage:                                                                 '
 	@echo '   make prepare    first time use, setting the directories     '
@@ -44,65 +47,43 @@ help:
 
 
 
-all : tex docx html epub pdf
+all : tex docx html5 epub pdf
 
 
-pdf:
-	pandoc "$(INPUTDIR)/"*.md \
-	-o "$(OUTPUTDIR)/$(NAME).pdf" \
-	$(TEXTEMPLATE) \
-	$(TEXFLAGS) 2>pandoc.log
-	xdg-open "$(OUTPUTDIR)/$(NAME).pdf"
+pdf:$(PDF)
+$(PDF): $(MD)
+	pandoc -o $@ source/*.md $(TEXTEMPLATE) $(TEXFLAGS) $(FILTERS) 2>output/pdf.log
+	if [[ "$OSTYPE" == "darwin" ]]; then open $@; else xdg-open $@;fi
 
-tex:
-	pandoc "$(INPUTDIR)"/*.md \
-	--filter pandoc-crossref \
-	--filter pandoc-citeproc \
-	-o "$(OUTPUTDIR)/$(NAME).tex" \
-	--latex-engine=xelatex
+tex: $(TEX)
+$(TEX): $(MD)
+	pandoc -o $@ source/*.md $(TEXFLAGS) 2>output/tex.log
+	if [[ "$OSTYPE" == "darwin" ]]; then open $@; else xdg-open $@;fi
 
-docx:
-	pandoc "$(INPUTDIR)"/*.md \
-	--filter pandoc-crossref \
-	--filter pandoc-citeproc \
-	$(DOCXTEMPLATE) \
-	--toc \
-	-o "$(OUTPUTDIR)/$(NAME).docx"
+docx: $(DOCX)
+$(DOCX): $(MD)
+	pandoc -o $@ source/*.md $(TEXFLAGS) $(DOCXTEMPLATE) --toc 2>output/docx.log
+	if [[ "$OSTYPE" == "darwin" ]]; then open $@; else xdg-open $@;fi
 
-html:
-	pandoc "$(INPUTDIR)"/*.md \
-	-o "$(OUTPUTDIR)/$(NAME).html" \
-	--include-in-header="$(STYLEDIR)/style.css" \
-	-t html5 \
-	--toc \
-	--standalone \
-	--filter pandoc-crossref \
-	--filter pandoc-citeproc \
-	--number-sections
-	rm -rf "$(OUTPUTDIR)/source"
-	mkdir "$(OUTPUTDIR)/source"
-	cp -r "$(INPUTDIR)/figures" "$(OUTPUTDIR)/source/figures"
+html5: $(HTML5)
+$(HTML5): $(MD)
+	pandoc -o $@ source/*.md $(CSS) $(TEXFLAGS) --toc -t html5 2>output/html5.log
+	if [[ "$OSTYPE" == "darwin" ]]; then open $@; else xdg-open $@;fi
 
-epub:
-	pandoc "$(INPUTDIR)"/*.md \
-	-o "$(OUTPUTDIR)/$(NAME).epub" \
-	--toc \
-	--standalone \
-	--filter pandoc-crossref \
-	--filter pandoc-citeproc
-	rm -rf "$(OUTPUTDIR)/source"
-	mkdir "$(OUTPUTDIR)/source"
-	cp -r "$(INPUTDIR)/figures" "$(OUTPUTDIR)/source/figures"
+epub: $(EPUB)
+$(EPUB): $(MD)
+	pandoc -o $@ source/*.md $(TEXFLAGS) --toc 2>output/epub.log
+	if [[ "$OSTYPE" == "darwin" ]]; then open $@; else xdg-open $@;fi
 
-beamer:
-	pandoc "$(INPUTDIR)/"*.md \
-	-t beamer \
-	-o "$(OUTPUTDIR)/$(NAME).pdf" \
-	$(TEXTEMPLATE) \
-	$(TEXFLAGS) 2>pandoc.log
-	xdg-open "$(OUTPUTDIR)/$(NAME).pdf"
+beamer: $(BEAMER)
+$(BEAMER): $(MD)
+	pandoc -o $@ source/*.md $(TEXFLAGS) --toc -t beamer 2>output/beamer.log
+	if [[ "$OSTYPE" == "darwin" ]]; then open $@; else xdg-open $@;fi
 
 prepare:
+	command -v pandoc >/dev/null 2>&1 || { echo "I require pandoc but it's not installed.  Aborting." >&2; exit 1; }
+	command -v pandoc-crossref >/dev/null 2>&1 || { echo "I require pandoc-crossref but it's not installed.  Aborting." >&2; exit 1; }
+	command -v pandoc-citeproc >/dev/null 2>&1 || { echo "I require pandoc-citeproc but it's not installed.  Aborting." >&2; exit 1; }
 	mkdir "output"
 	mkdir "source"
 	mkdir "style"
@@ -111,6 +92,6 @@ update:
 	wget http://tiny.cc/mighty_make -O Makefile
 
 clean:
-	rm -f "$(OUTPUTDIR)/" *.md *.html *.pdf *.tex *.docx
+	rm -f "output/" *.md *.html *.pdf *.tex *.docx *.epub
 
-.PHONY: help pdf docx html tex clean
+.PHONY: help prepare update beamer clean

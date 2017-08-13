@@ -71,7 +71,7 @@
 			"file": "Makefile",
 			"settings":
 			{
-				"buffer_size": 3417,
+				"buffer_size": 3692,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -109,9 +109,17 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "pus",
+		"last_filter": "close",
 		"selected_items":
 		[
+			[
+				"close",
+				"Project: Close"
+			],
+			[
+				"clos",
+				"Project: Close"
+			],
 			[
 				"pus",
 				"Git: Push"
@@ -141,20 +149,12 @@
 				"Git: Update Project Ignored Files"
 			],
 			[
-				"close",
-				"Project: Close"
-			],
-			[
 				"clo",
 				"Convert Case: Lower Case"
 			],
 			[
 				"searc",
 				"Evernote: Search Note"
-			],
-			[
-				"clos",
-				"Project: Close"
 			],
 			[
 				"pando",
@@ -682,6 +682,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$^",
 			"reference",
 			"escol1",
 			"\"",
@@ -739,9 +740,10 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
+			"source/*.md",
 			" "
 		],
 		"reverse": false,
@@ -753,7 +755,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -762,15 +764,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3417,
+						"buffer_size": 3692,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								747,
+								747
 							]
 						],
 						"settings":
@@ -801,7 +803,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -825,11 +827,12 @@
 						{
 							"WordCount":
 							{
-								"changes": -1,
-								"modified": true,
-								"selection": true,
+								"changes": 0,
+								"count": 335,
+								"modified": false,
+								"selection": false,
 								"status": -1,
-								"syntax": "markdown extended"
+								"syntax": "plain text"
 							},
 							"draw_centered": false,
 							"draw_indent_guides": true,
@@ -846,10 +849,10 @@
 							"wrap_width": 0
 						},
 						"translation.x": 0.0,
-						"translation.y": 73.0,
+						"translation.y": 56.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -906,7 +909,7 @@
 	"project": "mightymake.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -921,19 +924,23 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "thes",
+		"last_filter": "thesi",
 		"selected_items":
 		[
 			[
-				"thes",
-				"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/thesis.sublime-project"
+				"thesi",
+				"~/Dropbox/Documentos/Shared between Jacyra-Luis/Pandoquer/thesis.sublime-project"
 			],
 			[
-				"thje",
-				"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/thesis.sublime-project"
+				"thes",
+				"~/Dropbox/Documentos/Psiquiatria/Projetos em andamento/THESIS/thesis.sublime-project"
 			],
 			[
 				"the",
+				"~/Dropbox/Documentos/Shared between Jacyra-Luis/Pandoquer/thesis.sublime-project"
+			],
+			[
+				"thje",
 				"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/thesis.sublime-project"
 			],
 			[
