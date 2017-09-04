@@ -77,7 +77,7 @@ $(EPUB): $(MD)
 
 beamer: $(BEAMER)
 $(BEAMER): $(MD)
-	pandoc -o $@ source/*.md $(TEXFLAGS) --toc -t beamer 2>output/beamer.log
+	pandoc -o $@ source/*.md $(TEXFLAGS) -t beamer 2>output/beamer.log
 	if [[ "$OSTYPE" == "darwin" ]]; then open $@; else xdg-open $@;fi
 
 prepare:
