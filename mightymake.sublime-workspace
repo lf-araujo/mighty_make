@@ -80,7 +80,8 @@
 			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 2143,
+				"buffer_size": 2144,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -117,10 +118,6 @@
 				"Project: Close"
 			],
 			[
-				"clos",
-				"Project: Close"
-			],
-			[
 				"pus",
 				"Git: Push"
 			],
@@ -131,6 +128,14 @@
 			[
 				"add",
 				"Git: Add All"
+			],
+			[
+				"bran",
+				"Git: New Branch"
+			],
+			[
+				"clos",
+				"Project: Close"
 			],
 			[
 				"push",
@@ -755,7 +760,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -771,20 +776,12 @@
 						"selection":
 						[
 							[
-								747,
-								747
+								50,
+								50
 							]
 						],
 						"settings":
 						{
-							"WordCount":
-							{
-								"changes": -1,
-								"modified": true,
-								"selection": true,
-								"status": -1,
-								"syntax": "makefile"
-							},
 							"draw_centered": false,
 							"draw_indent_guides": true,
 							"draw_white_space": "selection",
@@ -803,7 +800,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -812,15 +809,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2143,
+						"buffer_size": 2144,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								914,
-								914
+								28,
+								28
 							]
 						],
 						"settings":
@@ -849,10 +846,10 @@
 							"wrap_width": 0
 						},
 						"translation.x": 0.0,
-						"translation.y": 56.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

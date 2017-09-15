@@ -1,4 +1,4 @@
-# Mighty Make - Standardize Document Building
+# Mighty Make - Standardized Document Building
 
 Mighty make is a building system to large projects that uses pandoc. It can help producing from letters to entire thesis and books.
 
