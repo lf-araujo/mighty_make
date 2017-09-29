@@ -1,5 +1,27 @@
 .DEFAULT_GOAL := pdf
 
+define INFORMATION
+Makefile for automated typography using pandoc.
+Version 1.2                       
+
+Usage:
+make prepare    first time use, setting the directories 
+make html       generate a web version             
+make pdf        generate a PDF file  			  
+make docx       generate a Docx file 			  
+make tex        generate a Latex file 			  
+make beamer     generate a beamer presentation 		  
+make all        generate all files              
+make update     update the makefile to last version      
+make            will fallback to PDF               
+
+It implies some directories in the filesystem: source, output and style
+It also implies that the bibliography will be defined via the yaml	  
+Depends on pandoc-citeproc and pandoc-crossref						  
+endef
+
+export INFORMATION
+
 MD = $(wildcard source/*.md)
 PDF = output/$(notdir $(CURDIR)).pdf
 TEX = output/$(notdir $(CURDIR)).tex
@@ -23,29 +45,7 @@ ifneq ("$(wildcard style/style.css)","")
 endif
 
 help:
-	@echo ' 																	  '
-	@echo 'Makefile for automated typography using pandoc.                         '
-	@echo 'Version 1.1                        '
-	@echo '                                                                       '
-	@echo 'Usage:                                                                 '
-	@echo '   make prepare    first time use, setting the directories     '
-	@echo '   make html       generate a web version             '
-	@echo '   make pdf        generate a PDF file  			  '
-	@echo '   make docx       generate a Docx file 			  '
-	@echo '   make tex        generate a Latex file 			  '
-	@echo '   make beamer     generate a beamer presentation 			  '
-	@echo '   make all        generate all files                 '
-	@echo '   make update     update the makefile to last version       '
-	@echo '   make            will fallback to PDF               '
-	@echo ' 																	  '
-	@echo 'It implies some directories in the filesystem: source, output and style'
-	@echo 'It also implies that the bibliography will be defined via the yaml	  '
-	@echo ' 																	  '
-	@echo 'Depends on pandoc-citeproc and pandoc-crossref						  '
-	@echo 'Get local templates with: pandoc -D latex/html/etc	         		  '
-	@echo ' 																	  '
-
-
+	@echo "$$INFORMATION"
 
 all : tex docx html5 epub pdf
 
@@ -87,6 +87,25 @@ prepare:
 	mkdir "output"
 	mkdir "source"
 	mkdir "style"
+
+prepare-latex:
+	@echo "This will install a latex minimal installation, but tlmgr can be used to fill in the packages"
+	wget \
+	--continue \
+	--directory-prefix /tmp \
+	http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+
+	tar \
+	--extract \
+	--gunzip \
+	--directory /tmp \
+	--file /tmp/install-tl-unx.tar.gz
+
+	/tmp/install-tl-*/install-tl \
+	-repository http://mirror.ctan.org/systems/texlive/tlnet \
+	-no-gui \
+	-scheme scheme-minimal
+	@echo "It's done. Use <tlmgr install PACKAGENAME> to install the packages you need."
 
 update:
 	wget http://tiny.cc/mighty_make -O Makefile
