@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"prepare",
+				"prepare-latex"
+			],
+			[
 				"descri",
 				"descriptivestats"
 			],
@@ -68,19 +72,19 @@
 	"buffers":
 	[
 		{
-			"file": "Makefile",
+			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 3692,
+				"buffer_size": 2144,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "README.md",
+			"file": "Makefile",
 			"settings":
 			{
-				"buffer_size": 2144,
+				"buffer_size": 3967,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -110,13 +114,9 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "close",
+		"last_filter": "pus",
 		"selected_items":
 		[
-			[
-				"close",
-				"Project: Close"
-			],
 			[
 				"pus",
 				"Git: Push"
@@ -130,20 +130,40 @@
 				"Git: Add All"
 			],
 			[
-				"bran",
-				"Git: New Branch"
-			],
-			[
-				"clos",
-				"Project: Close"
+				"branch",
+				"Git: Change Branch"
 			],
 			[
 				"push",
 				"Git: Push"
 			],
 			[
+				"merge",
+				"Git: Merge Branch"
+			],
+			[
 				"pull",
 				"Git: Pull"
+			],
+			[
+				"gitadd",
+				"Git: Add All"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"close",
+				"Project: Close"
+			],
+			[
+				"bran",
+				"Git: New Branch"
+			],
+			[
+				"clos",
+				"Project: Close"
 			],
 			[
 				"git ig",
@@ -216,10 +236,6 @@
 			[
 				"sear",
 				"Evernote: Search Note"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				"inst",
@@ -514,7 +530,7 @@
 				"Evernote Settings: User"
 			]
 		],
-		"width": 467.0
+		"width": 479.0
 	},
 	"console":
 	{
@@ -542,6 +558,9 @@
 	],
 	"file_history":
 	[
+		"/home/luis/Dropbox/Documentos/Coding/Swift/Finances/Sources/main.swift",
+		"/home/luis/Dropbox/Documentos/Coding/bash/mighty_make/.gitignore",
+		"/home/luis/Dropbox/Documentos/Coding/bash/mighty_make/Makefile",
 		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/2016-01-04 Submission Psychiatric Research - Neuroimaging/Review answer/Makefile",
 		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Coding/bash/mighty_make/.gitignore",
 		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/2016-01-04 Submission Psychiatric Research - Neuroimaging/Review answer/source/Review answer.md",
@@ -666,14 +685,11 @@
 		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/10_RDoC_shift.md",
 		"/home/luis/.config/sublime-text-3/Packages/User/LanguageTool.sublime-settings",
 		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/14_appendix2.md",
-		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/11_Psychiatry_As_Special_Case_Of_Cognitive_Science.md",
-		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/Sch moderates structural changes on IQ.R",
-		"/home/luis/.config/sublime-text-3/Packages/User/Package Control.cache/01524fae79697630d0454ba3fabd9414",
-		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/03_abstract.md"
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/11_Psychiatry_As_Special_Case_Of_Cognitive_Science.md"
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -765,46 +781,6 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Makefile",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3692,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								50,
-								50
-							]
-						],
-						"settings":
-						{
-							"draw_centered": false,
-							"draw_indent_guides": true,
-							"draw_white_space": "selection",
-							"fold_buttons": true,
-							"gutter": true,
-							"line_numbers": true,
-							"rulers":
-							[
-							],
-							"scroll_past_end": true,
-							"syntax": "Packages/Makefile/Makefile.sublime-syntax",
-							"word_wrap": "auto",
-							"wrap_width": 0
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "README.md",
 					"semi_transient": false,
 					"settings":
@@ -844,6 +820,34 @@
 							"syntax": "Packages/Markdown Extended/Syntaxes/Markdown Extended.sublime-syntax",
 							"word_wrap": "auto",
 							"wrap_width": 0
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3967,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								339,
+								339
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -906,7 +910,7 @@
 	"project": "mightymake.sublime-project",
 	"replace":
 	{
-		"height": 64.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
