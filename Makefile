@@ -94,7 +94,11 @@ prepare:
 	if [[ "$OSTYPE" == "darwin" ]]; then open source/00-metadata.md; else xdg-open source/00-metadata.md;fi
 
 prepare-latex:
-	@echo "This will install a latex minimal installation, but tlmgr can be used to fill in the packages. To automatically perform dependency installations run make dependencies in the project directory."
+	@echo "This will install a latex minimal installation, but tlmgr can be used to fill in the packages."
+	@echo "To automatically perform dependency installations run make dependencies in the project directory."
+	@echo "Note that installing a latex distribution takes some trial and error, "
+	@echo "the approach I used here is the one that creates the smallest distribution."
+	@echo "Ubuntu's latex distribution can be up to 2.8GB, whereas with this method it only takes around 1GB."
 	wget \
 	--continue \
 	--directory-prefix /tmp \
@@ -113,7 +117,7 @@ prepare-latex:
 	@echo "It's done. Use <tlmgr install PACKAGENAME> to install the packages you need."
 
 dependencies:
-	pkexec /opt/texbin/tlmgr install $(cat source/*.md | sed -n 's~^[^%]*\\usepackage[^{]*{\([^}]*\)}.*$~\1~p' | paste -sd ' ' -)
+	pkexec /opt/texbin/tlmgr install $$(cat source/*.md | sed -n "s~^[^%]*\\usepackage[^{]*{\([^}]*\)}.*$$~\1~p" | paste -sd " 	" -)
 
 update:
 	wget http://tiny.cc/mighty_test -O Makefile
