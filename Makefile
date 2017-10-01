@@ -116,7 +116,7 @@ dependencies:
 	pkexec /opt/texbin/tlmgr install $(cat source/*.md | sed -n 's~^[^%]*\\usepackage[^{]*{\([^}]*\)}.*$~\1~p' | paste -sd ' ' -)
 
 update:
-	wget http://tiny.cc/mighty_make -O Makefile
+	wget http://tiny.cc/mighty_test -O Makefile
 
 clean:
 	rm -f "output/" *.md *.html *.pdf *.tex *.docx *.epub
