@@ -1,5 +1,10 @@
 # Mighty Make - Standardized Document Building
 
+
+**This is the first version towards inclusion in pandoc-scholar**
+
+-[ ] Make an output md file with citations added to the yaml header, so to facilitate sharing the document with coworkers
+
 Mighty make is a building system to large projects that uses pandoc. It can help producing from letters to entire thesis and books.
 
 To use it start with: 
