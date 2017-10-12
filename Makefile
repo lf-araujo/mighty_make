@@ -1,24 +1,27 @@
 .DEFAULT_GOAL := pdf
 
+
 define INFORMATION
 Makefile for automated typography using pandoc.
-Version 1.2                       
+Version 1.3                       
 
 Usage:
-make prepare       first time use, setting the directories
-make prepare-latex create a minimal latex install
-make dependencies  tries to fetch all included packages in the project and install them
-make html          generate a web version
-make pdf           generate a PDF file
-make docx          generate a Docx file 			  
-make tex           generate a Latex file
-make beamer        generate a beamer presentation
-make all           generate all files
-make update        update the makefile to last version
-make               will fallback to PDF
+make prepare                    first time use, setting the directories
+make prepare-latex              create a minimal latex install
+make dependencies               tries to fetch all included packages in the project and install them
+make html                       generate a web version
+make pdf                        generate a PDF file
+make docx                       generate a Docx file 			  
+make tex                        generate a Latex file
+make beamer                     generate a beamer presentation
+make all                        generate all files
+make fetch THEME=<github addrs> fetch the theme for a template online
+make update                     update the makefile to last version
+make update-testing-branch      update to latest testing version            
+make                            will fallback to PDF
 
 It implies some directories in the filesystem: source, output and style
-It also implies that the bibliography will be defined via the yaml	  
+It also implies that the bibliography file will be defined via the yaml	  
 Depends on pandoc-citeproc and pandoc-crossref						  
 endef
 
@@ -31,11 +34,17 @@ DOCX = output/$(notdir $(CURDIR)).docx
 HTML5 = output/$(notdir $(CURDIR)).html
 EPUB = output/$(notdir $(CURDIR)).epub
 BEAMER = output/$(notdir $(CURDIR))-presentation.pdf
+PACKAGES = s~^[^%]*\\usepackage[^{]*{\([^}]*\)}.*$$~\1~p
 
 FILFILES = $(wildcard style/*.py)
+FILFILES += $(wildcard style/*.lua)
 FILTERS := $(foreach FILFILES, $(FILFILES), --filter $(FILFILES))
 TEXFLAGS = -F pandoc-crossref -F pandoc-citeproc --latex-engine=xelatex
 
+
+ifneq ("$(wildcard style/Makefile)","")
+	include style/Makefile
+endif
 ifneq ("$(wildcard style/template.tex)","")
 	TEXTEMPLATE := "--template=style/template.tex"
 endif
@@ -87,11 +96,16 @@ prepare:
 	command -v pandoc >/dev/null 2>&1 || { echo "I require pandoc but it's not installed.  Aborting." >&2; exit 1; }
 	command -v pandoc-crossref >/dev/null 2>&1 || { echo "I require pandoc-crossref but it's not installed.  Aborting." >&2; exit 1; }
 	command -v pandoc-citeproc >/dev/null 2>&1 || { echo "I require pandoc-citeproc but it's not installed.  Aborting." >&2; exit 1; }
+	command -v subversion >/dev/null 2>&1 || { echo "I require svn but it's not installed.  Aborting." >&2; exit 1; }
 	mkdir "output"
 	mkdir "source"
 	mkdir "style"
 	touch source/00-metadata.md
 	if [[ "$OSTYPE" == "darwin" ]]; then open source/00-metadata.md; else xdg-open source/00-metadata.md;fi
+
+fetch:
+	@echo "Trying to fetch the style directory from this github repo"
+	svn export $(THEME).git/trunk/style
 
 prepare-latex:
 	@echo "This will install a latex minimal installation, but tlmgr can be used to fill in the packages."
@@ -110,16 +124,22 @@ prepare-latex:
 	--directory /tmp \
 	--file /tmp/install-tl-unx.tar.gz
 
-	/tmp/install-tl-*/install-tl \
+	pkexec /tmp/install-tl-*/install-tl \
 	-repository http://mirror.ctan.org/systems/texlive/tlnet \
 	-no-gui \
 	-scheme scheme-minimal
 	@echo "It's done. Use <tlmgr install PACKAGENAME> to install the packages you need."
 
 dependencies:
-	pkexec /opt/texbin/tlmgr install $$(cat source/*.md | sed -n "s~^[^%]*\\usepackage[^{]*{\([^}]*\)}.*$$~\1~p" | paste -sd " 	" -)
+	@echo "First run for .md files"
+	pkexec /opt/texbin/tlmgr install $$(cat source/*.md | sed -n '$(PACKAGES)' | paste -sd ' ' -)
+	@echo "Second run for .tex files"
+	pkexec /opt/texbin/tlmgr install $$(cat style/*.tex | sed -n '$(PACKAGES)' | paste -sd ' ' -)
 
 update:
+	wget http://tiny.cc/mighty_make -O Makefile
+
+update-testing-branch:
 	wget http://tiny.cc/mighty_test -O Makefile
 
 clean:

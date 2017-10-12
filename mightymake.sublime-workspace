@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"PACKA",
+				"PACKAGES"
+			],
+			[
 				"late",
 				"prepare-latex"
 			],
@@ -72,19 +76,10 @@
 	"buffers":
 	[
 		{
-			"file": "README.md",
-			"settings":
-			{
-				"buffer_size": 2144,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "Makefile",
 			"settings":
 			{
-				"buffer_size": 4656,
+				"buffer_size": 5550,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -113,16 +108,12 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 154.0,
-		"last_filter": "push",
+		"height": 334.0,
+		"last_filter": "commi",
 		"selected_items":
 		[
 			[
-				"push",
-				"Git: Push"
-			],
-			[
-				"comm",
+				"commi",
 				"Git: Commit"
 			],
 			[
@@ -130,7 +121,23 @@
 				"Git: Add All"
 			],
 			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
 				"pus",
+				"Git: Push"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"adda",
+				"Git: Add All"
+			],
+			[
+				"push",
 				"Git: Push"
 			],
 			[
@@ -530,7 +537,7 @@
 				"Evernote Settings: User"
 			]
 		],
-		"width": 479.0
+		"width": 470.0
 	},
 	"console":
 	{
@@ -558,9 +565,25 @@
 	],
 	"file_history":
 	[
+		"/home/luis/Dropbox/Documentos/Coding/bash/pandoc-letter/Makefile",
+		"/home/luis/Dropbox/Documentos/Coding/bash/pandoc-letter/source/letter.md",
+		"/home/luis/Dropbox/Documentos/Coding/bash/pandoc-letter/style/Makefile",
+		"/home/luis/Dropbox/Documentos/Coding/bash/pandoc-letter/style/letterhead.md",
+		"/home/luis/Dropbox/Documentos/Coding/bash/pandoc-letter/README.md",
+		"/home/luis/Dropbox/Documentos/Coding/bash/mighty_make/Makefile",
+		"/tmp/pandoc-letter/Makefile",
+		"/tmp/pandoc-letter/source/letter.md",
+		"/tmp/pandoc-letter/style/letterhead.md",
+		"/tmp/pandoc-letter/style/letterhead.",
+		"/home/luis/Dropbox/Documentos/Coding/bash/pandoc-letter/output/pdf.log",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos/LIVRO-philpsy/source/00_metadata.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos/LIVRO-philpsy/output/pdf.log",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Doutorado/2017 Renovacao/Makefile",
+		"/home/luis/Dropbox/Documentos/Coding/bash/mighty_make/README.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Doutorado/2017 Renovacao/source/relatorio_academico.md",
+		"/home/luis/Dropbox/Documentos/Psiquiatria/Doutorado/2017 Renovacao/output/beamer.log",
 		"/home/luis/Dropbox/Documentos/Coding/Swift/Finances/Sources/main.swift",
 		"/home/luis/Dropbox/Documentos/Coding/bash/mighty_make/.gitignore",
-		"/home/luis/Dropbox/Documentos/Coding/bash/mighty_make/Makefile",
 		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/2016-01-04 Submission Psychiatric Research - Neuroimaging/Review answer/Makefile",
 		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Coding/bash/mighty_make/.gitignore",
 		"/media/budgie-remix/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/ARTIGO neuroimagem estrutural QI moderation/2016-01-04 Submission Psychiatric Research - Neuroimaging/Review answer/source/Review answer.md",
@@ -669,27 +692,11 @@
 		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/Makefile",
 		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/00_metadata.md",
 		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/acronyms.py",
-		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/06_methods.md",
-		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/09_DTI_moderation.md",
-		"/C/Users/554UU-lfernado/Desktop/Nusdast/CC0212_0/FreeSurfer_v5-3-0/stats/lh.aparc.stats",
-		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/11_Psychiatry_As_Special.md",
-		"/media/elementary/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/06_intro.md",
-		"/media/elementary/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/00_metadata.md",
-		"/media/elementary/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/10_RDoC_shift.md",
-		"/media/elementary/887A3EFA7A3EE49A/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/11_Psychiatry_As_Special.md",
-		"/home/luis/temp.md",
-		"/tmp/Butter/70cfcd2e3623f221ec82314f95f75a4ac5ba671e/Snowden.2016.720p.WEBRip.x264.AAC-ETRG/Torrent Downloaded From ExtraTorrent.cc.vtt",
-		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/09_methods.md",
-		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/04_acknowled.md",
-		"/tmp/temp.md",
-		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/10_RDoC_shift.md",
-		"/home/luis/.config/sublime-text-3/Packages/User/LanguageTool.sublime-settings",
-		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/14_appendix2.md",
-		"/home/luis/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/11_Psychiatry_As_Special_Case_Of_Cognitive_Science.md"
+		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/06_methods.md"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -776,73 +783,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "README.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2144,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								28,
-								28
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 0,
-								"count": 335,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"draw_centered": false,
-							"draw_indent_guides": true,
-							"draw_white_space": "selection",
-							"fold_buttons": true,
-							"gutter": true,
-							"line_numbers": true,
-							"rulers":
-							[
-							],
-							"scroll_past_end": true,
-							"syntax": "Packages/Markdown Extended/Syntaxes/Markdown Extended.sublime-syntax",
-							"word_wrap": "auto",
-							"wrap_width": 0
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "Makefile",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4656,
+						"buffer_size": 5550,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2214,
-								2214
+								167,
+								167
 							]
 						],
 						"settings":
@@ -850,7 +808,7 @@
 							"syntax": "Packages/Makefile/Makefile.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 900.0,
+						"translation.y": 2025.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1000,7 +958,7 @@
 			]
 		]
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
