@@ -108,10 +108,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 334.0,
-		"last_filter": "commi",
+		"height": 214.0,
+		"last_filter": "clos",
 		"selected_items":
 		[
+			[
+				"clos",
+				"Project: Close"
+			],
+			[
+				"pus",
+				"Git: Push"
+			],
 			[
 				"commi",
 				"Git: Commit"
@@ -123,10 +131,6 @@
 			[
 				"mini",
 				"View: Toggle Minimap"
-			],
-			[
-				"pus",
-				"Git: Push"
 			],
 			[
 				"comm",
@@ -167,10 +171,6 @@
 			[
 				"bran",
 				"Git: New Branch"
-			],
-			[
-				"clos",
-				"Project: Close"
 			],
 			[
 				"git ig",
@@ -537,7 +537,7 @@
 				"Evernote Settings: User"
 			]
 		],
-		"width": 470.0
+		"width": 461.0
 	},
 	"console":
 	{
@@ -696,7 +696,7 @@
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 25.0
 	},
 	"find_in_files":
 	{
@@ -799,8 +799,8 @@
 						"selection":
 						[
 							[
-								167,
-								167
+								5399,
+								5399
 							]
 						],
 						"settings":
@@ -808,7 +808,7 @@
 							"syntax": "Packages/Makefile/Makefile.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2025.0,
+						"translation.y": 2295.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -819,7 +819,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 25.0
 	},
 	"input":
 	{
@@ -868,7 +868,7 @@
 	"project": "mightymake.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -962,7 +962,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 226.0,
+	"side_bar_width": 266.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
