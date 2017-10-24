@@ -79,7 +79,7 @@
 			"file": "Makefile",
 			"settings":
 			{
-				"buffer_size": 5550,
+				"buffer_size": 5543,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -108,10 +108,30 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 214.0,
-		"last_filter": "clos",
+		"height": 392.0,
+		"last_filter": "close",
 		"selected_items":
 		[
+			[
+				"close",
+				"Project: Close"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add All"
+			],
+			[
+				"pull",
+				"Git: Pull"
+			],
 			[
 				"clos",
 				"Project: Close"
@@ -125,24 +145,12 @@
 				"Git: Commit"
 			],
 			[
-				"add",
-				"Git: Add All"
-			],
-			[
 				"mini",
 				"View: Toggle Minimap"
 			],
 			[
-				"comm",
-				"Git: Commit"
-			],
-			[
 				"adda",
 				"Git: Add All"
-			],
-			[
-				"push",
-				"Git: Push"
 			],
 			[
 				"branch",
@@ -153,20 +161,12 @@
 				"Git: Merge Branch"
 			],
 			[
-				"pull",
-				"Git: Pull"
-			],
-			[
 				"gitadd",
 				"Git: Add All"
 			],
 			[
 				"install",
 				"Package Control: Install Package"
-			],
-			[
-				"close",
-				"Project: Close"
 			],
 			[
 				"bran",
@@ -537,7 +537,7 @@
 				"Evernote Settings: User"
 			]
 		],
-		"width": 461.0
+		"width": 524.0
 	},
 	"console":
 	{
@@ -565,6 +565,10 @@
 	],
 	"file_history":
 	[
+		"/tmp/pandoc-acronyms/style/acronyms.py",
+		"/tmp/pandoc-acronyms/source/00-metadata.md",
+		"/tmp/pandoc-acronyms/.gitignore",
+		"/tmp/pandoc-acronyms/Makefile",
 		"/home/luis/Dropbox/Documentos/Coding/bash/pandoc-letter/Makefile",
 		"/home/luis/Dropbox/Documentos/Coding/bash/pandoc-letter/source/letter.md",
 		"/home/luis/Dropbox/Documentos/Coding/bash/pandoc-letter/style/Makefile",
@@ -688,15 +692,11 @@
 		"/tmp/acronyms.py",
 		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/01_frontmatter.md",
 		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/05_intro.md",
-		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/12_conclusion.md",
-		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/Makefile",
-		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/00_metadata.md",
-		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/acronyms.py",
-		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/06_methods.md"
+		"/C/Users/554UU-lfernado/Dropbox/Documentos/Psiquiatria/Projetos em andamento/Thesis/source/12_conclusion.md"
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -792,23 +792,31 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5550,
+						"buffer_size": 5543,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5399,
-								5399
+								2350,
+								2350
 							]
 						],
 						"settings":
 						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "makefile"
+							},
 							"syntax": "Packages/Makefile/Makefile.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2295.0,
+						"translation.y": 1053.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -819,7 +827,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 25.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -868,7 +876,7 @@
 	"project": "mightymake.sublime-project",
 	"replace":
 	{
-		"height": 46.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -883,7 +891,7 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "thesi",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
