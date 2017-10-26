@@ -79,7 +79,7 @@
 			"file": "Makefile",
 			"settings":
 			{
-				"buffer_size": 5543,
+				"buffer_size": 5441,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -109,9 +109,13 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "close",
+		"last_filter": "pull",
 		"selected_items":
 		[
+			[
+				"pull",
+				"Git: Pull"
+			],
 			[
 				"close",
 				"Project: Close"
@@ -127,10 +131,6 @@
 			[
 				"add",
 				"Git: Add All"
-			],
-			[
-				"pull",
-				"Git: Pull"
 			],
 			[
 				"clos",
@@ -537,7 +537,7 @@
 				"Evernote Settings: User"
 			]
 		],
-		"width": 524.0
+		"width": 461.0
 	},
 	"console":
 	{
@@ -792,15 +792,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5543,
+						"buffer_size": 5441,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2350,
-								2350
+								5245,
+								5245
 							]
 						],
 						"settings":
@@ -816,7 +816,7 @@
 							"syntax": "Packages/Makefile/Makefile.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1053.0,
+						"translation.y": 1734.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
