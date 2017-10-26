@@ -1,8 +1,18 @@
 # Mighty Make - Standardized Document Building
 
-Mighty make is a building system to large projects that uses pandoc. It can help producing from letters to entire thesis and books.
+## Todos
+- [ ] Make an output md file with citations added to the yaml header, so to facilitate sharing the document with coworkers
 
-To use it start with: 
+## Abstract
+
+Mighty make is a building system for medium or large document projects (books, thesis, essays, papers). It is a makefile that considers a certain folder structure and passes information in these folders on to [pandoc](www.pandoc.org), which proceeds with the heavy lifting.  It follows pandoc-scholar designs loosely and has reached a stable state. I will slowly reduce pushes to this project, as it already does most of what I wanted. 
+
+There is some functionality for Windows systems, however untested. Also, there is an extension framework, where one can pull themes from github.  
+
+
+## Using it
+
+Start with: 
 
 ```
 wget http://tiny.cc/mighty_make -O Makefile
