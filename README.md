@@ -23,7 +23,7 @@ make fetch THEME="https://github.com/lf-araujo/tuftish-pandoc"
 
 Editing the source in the `/source` directory will produce documents similar to:
 
-![]( lf-araujo.github.io/images/Captura de tela de 2017-12-26 20-26-08.png )
+![]( https://lf-araujo.github.io/images/Captura de tela de 2017-12-26 20-26-08.png )
 
 ![]( lf-araujo.github.io/images/Captura de tela de 2017-12-26 20-26-35.png )
 
