@@ -57,7 +57,6 @@ Editing the source in the `/source` directory will produce documents similar to:
 
 ## Abstract
 
-<<<<<<< HEAD
 Mighty make is a building system for medium or large document projects (books, thesis, essays, papers). It is a makefile that considers a certain folder structure and passes information in these folders on to [pandoc](www.pandoc.org), which proceeds with the heavy lifting.  It follows pandoc-scholar designs loosely and has reached a stable state. I will slowly reduce pushes to this project, as it already does most of what I wanted. There is some functionality for Windows systems, however untested. Also, there is an extension framework, where one can pull themes from github.  
 
 ## Introduction
@@ -100,7 +99,34 @@ Start with:
 wget http://tiny.cc/mighty_make -O Makefile
 ```
 
-You can find all instructions with the command `make help`. Now prepare the file system to start the project with the command `make prepare`. This will create three directories (and open your standard editor with a blank source file in it):
+You can find all instructions with the command `make help`. This is the output it produces:
+
+
+```
+Makefile for automated typography using pandoc.
+Version 1.6                       
+
+Usage:
+make prepare                    first time use, setting the directories
+make prepare-latex              create a minimal latex install
+make dependencies               tries to fetch all included packages in the project and install them
+make html                       generate a web version
+make pdf                        generate a PDF file
+make docx                       generate a Docx file 			  
+make tex                        generate a Latex file
+make beamer                     generate a beamer presentation
+make all                        generate all files
+make fetch THEME=<github addrs> fetch the theme for a template online
+make update                     update the makefile to last version
+make update-testing-branch      update to latest testing version            
+make                            will fallback to PDF
+
+It implies some directories in the filesystem: source, output and style
+It also implies that the bibliography file will be defined via the yaml	  
+Depends on pandoc-citeproc and pandoc-crossref
+```
+
+Now prepare the file system to start the project with the command `make prepare`. This will create three directories (and open your standard editor with a blank source file in it):
 
 2. Source: this is the folder where your md files should be, also remember to organize them with leading number. Usually 00-metadata.md should hold the yaml for your project, followed by 01-first-chapter.md and so on.
 3. Style: this directory should hold all styling documents, from citation style to custom filters.
