@@ -25,7 +25,7 @@ Editing the source in the `/source` directory will produce documents similar to:
 
 ![](https://lf-araujo.github.io/images/Captura%20de%20tela%20de%202017-12-26%2020-26-08.png)
 
-![]( lf-araujo.github.io/images/Captura de tela de 2017-12-26 20-26-35.png )
+![](https://lf-araujo.github.io/images/Captura%20de%20tela%20de%202017-12-26%2020-26-35.png)
 
 [More here](https://lf-araujo.github.io/2017/11/10/tuftish.html)
 
@@ -37,7 +37,7 @@ make fetch THEME="https://github.com/lf-araujo/yapcvt"
 
 Editing the source in the `/source` directory will produce documents similar to:
 
-![]( lf-araujo.github.io/images/Captura de tela de 2017-12-26 20-34-18.png )
+![]( http://lf-araujo.github.io/images/Captura%20de%20tela%20de%202017-12-26%2020-34-18.png )
 
 
 [More here](https://lf-araujo.github.io/2016/09/24/Yet-Another-CV.html)
@@ -51,7 +51,7 @@ make fetch THEME="https://github.com/lf-araujo/pandoc-letter"
 
 Editing the source in the `/source` directory will produce documents similar to:
 
-![]( lf-araujo.github.io/images/Captura de tela de 2017-12-26 20-18-27.png )
+![]( http://lf-araujo.github.io/images/Captura%20de%20tela%20de%202017-12-26%2020-18-27.png )
 
 [More here](https://lf-araujo.github.io/2017/04/08/zletter.html)
 
