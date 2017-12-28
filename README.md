@@ -69,9 +69,9 @@ What I wanted was to separate style from the body of text. I did that by simply 
 
 ## Dependencies
 
-The wall I faced during the process of creating `mighty_make` regarded LaTeX rather complicated package management. The coolest mathematician, will still spend a lot of time setting the style of his paper with LaTeX, there is simply no way around this fact. How could I possibly convince my colleagues that this is a reasonable way of writing, but that would require the same amount of time as fixing the eventual Word style hindrances?
+The wall I faced during the process of creating `mighty_make` regarded LaTeX rather complicated package management. The coolest mathematician will use LaTeX but still spends as much time time setting the style of his paper with LaTeX, as with Word, there is simply no way around this fact. How could I possibly convince my colleagues in biological sciences that this is a reasonable way of writing, knowing that it would require the same amount of time as fixing the eventual Word style inconsistencies?
 
-In order to minimize the problem, I tried to bake a method of installing latex and dependencies for the themes using makefile targets (specific commands). This caused mighty_make to depend on more software than I wanted it to. The dependencies are:
+In order to ameliorate the problem, I tried to include a method of installing a LaTeX distribution, themes and it's dependencies into the tool.  This caused mighty_make to depend on more software than I wanted it to. The dependencies are:
 
 1. git
 2. subversion
@@ -85,10 +85,6 @@ One can install them all in any debian system using:
 sudo apt install git subversion cabal-install
 cabal install pandoc pandoc-citeproc pandoc-crossref
 ```
-
-### Fonts
-
-Fonts are not dependencies *per se*, as one can choose any that suits the needs. But remember to change the settings in the `yaml` block of the source file.
 
 
 ## Using it
@@ -136,16 +132,16 @@ If you follow the workflow from [this](https://lf-araujo.github.io/2016/11/07/md
 
 The style directory should hold your cls file (the citation style) and custom filters. I will present an acronym filter in upcoming post. 
 
-Finally, configure Sublime Text to build the files using make. This can be achieved by choosing `Tools > Build System > Make`, and once ready hit `Ctrl+B`. Your markdown document should then be processed and the output will be populated with a pdf file. If you are not interested in a pdf, but in any of the several formats supported by Pandoc, change the first line of the makefile accordingly: `.DEFAULT_GOAL := pdf`. Note that in the terminal you can call any of the formats supported: `make epub`, `make docx`, `make tex`, `make html`. In case you work with other formats, please commit changes to the project.
+Finally, configure your editor to build the files using make. This can be achieved in Sublime Text by choosing `Tools > Build System > Make`, and once ready hit `Ctrl+B`. Your markdown document should then be processed and the output will be populated with a pdf file. If you are not interested in a pdf, but in any of the several formats supported by Pandoc, change the first line of the makefile accordingly: `.DEFAULT_GOAL := pdf`. Note that in the terminal you can call any of the formats supported: `make epub`, `make docx`, `make tex`, `make html`. In case you work with other formats, please commit changes to the project.
 
 Note that it might be useful to update the Makefile by running the command `make update` now and then.
 
 
 ### Managing your LaTeX distribution with mighty_make
 
-As mentioned previously, one can manage the LaTeX distribution using this tool. This makes managing LaTeX easier, but it is still somewhat fallible. Some times LaTeX processing will require manual installation of packages, which my routine isn't able to detect as a dependency. 
+As mentioned previously, one can manage the LaTeX distribution using this tool. This makes managing LaTeX easier, but it is still somewhat fallible. Some times LaTeX processing will require manual installation of packages, which my routine may fail to recognize as dependencies. However, it works for most of the uses.
 
-I would recommend this approach to everyone who needs to save space in the computer. If you have plenty of space, follow your distribution standard standard way of installing LaTeX instead. In my case, I have a laptop with a tiny SDD, and using this method I can make the installation, that normally uses up to 2GB of space, use around 900mb (considering the type of work I do).
+I would recommend this approach to everyone who needs to save space in the computer. If you have plenty of space, follow your distribution standard way of installing LaTeX instead. In my case, I own a laptop with a tiny SDD, and by using this method I can save up to 1.1GB of space.
 
 #### Installing the LaTeX distribution
 
@@ -163,4 +159,4 @@ Now suppose you want to print a cv as per the example in the beginning of this d
 make dependencies
 ```
 
-If all went well, issuing `make` will generate the cv as expected in the `/output` directory.
+If all went well, issuing `make` will now generate the cv as expected in the `/output` directory.
