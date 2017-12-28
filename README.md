@@ -61,17 +61,17 @@ Mighty make is a building system for medium or large document projects (books, t
 
 ## Introduction
 
-The amount of time I spent correcting small styling changes introduced by the text editors from my colleagues (while collaborating), made me try to tackle the problem. This is a known problem from current text editors, where I can edit in windows, adding custom styles to conform to a journal's requirement, but after passing it along to other authors, the text would inevitably come back with styling problems. After years, I gave up and passed the text without any alterations to the standard Word styles, but even then some styling would be altered given other authors modifications. The simple act of opening a Windows made document in a MacOS machine (both with the latest Word) would introduce styling problems.
+The amount of time spent correcting small styling changes introduced by the text editors during a session of collaboration on a paper made me try alternatives. This is a known problem from current text editors, in which text edits inevitably adds small styling changes. This is more noticeable if authors are in different systems (Windows and Mac). Not altering styles in Word is not a solution, as, even without touching the original styles, styling errors are introduced regardless. The  act of opening a Windows made document in a MacOS machine (both with the latest Word) would introduce problems to the text. The resulting document of long collaboration sessions, where the document is passed to several authors is usually plagued with these inconsistencies.
 
-It is obviously not reasonable to expect that one person could alone tackle the problem. This is where open source came into scene. I noticed that by connecting open source projects as a recipe, would allow me generate much nicer texts than Word could ever produce. In the beginning I used bash scripts (see [here](https://lf-araujo.github.io/)), but came to discover a much nicer (however harder to code) approach using an old technology called [GNUMake](gnumake.org). 
+It is obviously not reasonable to expect that one person could alone tackle this problem, as it regards multi million companies. However, this is where open source comes into play. I noticed that connecting open source projects as a recipe allowed  me to generate much nicer texts than Word could ever produce. In the beginning I used bash scripts (see [here](https://lf-araujo.github.io/)), but came to discover a much nicer (however harder to code) approach using an old technology called [GNUMake](gnumake.org). 
 
 What I wanted was to separate style from the body of text. I did that by simply creating a standard directory structure, so whenever a certain style would be required, all I needed to do is to add the style files into the `/style` directory and the makefile would incorporate these into the final document. This is what `mighty_make` does.
 
 ## Dependencies
 
-The wall I faced during the process of creating `mighty_make` regarded LaTeX rather complicated package management. The coolest mathematician will use LaTeX but still spends as much time time setting the style of his paper with LaTeX, as with Word, there is simply no way around this fact. How could I possibly convince my colleagues in biological sciences that this is a reasonable way of writing, knowing that it would require the same amount of time as fixing the eventual Word style inconsistencies?
+The main difficulty I faced during the process of creating `mighty_make` regarded LaTeX rather complicated package management. The coolest mathematician uses LaTeX, that is for sure. However she still spends as much time time setting the style of his paper with LaTeX, as would she spend with Word. There is simply no way around this fact. How could I possibly convince my colleagues in biological sciences that this is a sensible alternative to MS Word's shortcomings, knowing that it would require the same amount of time as fixing the eventual Word style inconsistencies?
 
-In order to ameliorate the problem, I tried to include a method of installing a LaTeX distribution, themes and it's dependencies into the tool.  This caused mighty_make to depend on more software than I wanted it to. The dependencies are:
+In order to ameliorate the problem, I tried to include a method of installing a LaTeX distribution, themes and their dependencies into the tool.  This caused mighty_make to depend on more software than I wanted it to. So, in order to work, `mighty_make` depends on:
 
 1. git
 2. subversion
@@ -128,7 +128,7 @@ Now prepare the file system to start the project with the command `make prepare`
 3. Style: this directory should hold all styling documents, from citation style to custom filters.
 1. Output: this folder should hold files once building is complete.
 
-If you follow the workflow from [this](https://lf-araujo.github.io/2016/11/07/mdworkflow.html) post you can `cd` into the working directory: `cd source`, create your first file `touch document.md`, and open it with sublime text `subl3 document.md` to start writing. This is the simpler approach to start the project. In the case you are aiming at a larger document, you will probably want to create a 00-metadata.md to hold all yaml variables to the project.
+If you follow the workflow from a [previous](https://lf-araujo.github.io/2016/11/07/mdworkflow.html) note you can `cd` into the working directory: `cd source`, create your first file `touch document.md`, and open it with sublime text `subl3 document.md` to start writing. This is the simpler approach to start the project. In the case you are aiming at a larger document, you will probably want to create a 00-metadata.md to hold all yaml variables to the project.
 
 The style directory should hold your cls file (the citation style) and custom filters. I will present an acronym filter in upcoming post. 
 
