@@ -131,7 +131,7 @@ prepare-latex:
 	@echo "It's done. Use <tlmgr install PACKAGENAME> to install the packages you need."
 
 dependencies:
-	pkexec /opt/texbin/tlmgr install $$(cat source/*.md | sed -n '$(PACKAGES)' | paste -sd ' ' -) $$(cat style/*.tex | sed -n '$(PACKAGES)' | paste -sd ' ' -)
+	pkexec tlmgr install $$(cat source/*.md | sed -n '$(PACKAGES)' | paste -sd ' ' -) $$(cat style/*.tex | sed -n '$(PACKAGES)' | paste -sd ' ' -)
 
 update:
 	wget http://tiny.cc/mighty_make -O Makefile
