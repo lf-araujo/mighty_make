@@ -3,7 +3,7 @@
 
 define INFORMATION
 Makefile for automated typography using pandoc.
-Version 1.5                       
+Version 1.6                       
 
 Usage:
 make prepare                    first time use, setting the directories
@@ -11,7 +11,7 @@ make prepare-latex              create a minimal latex install
 make dependencies               tries to fetch all included packages in the project and install them
 make html                       generate a web version
 make pdf                        generate a PDF file
-make docx                       generate a Docx file 			  
+make docx                        generate a Docx file 			  
 make tex                        generate a Latex file
 make beamer                     generate a beamer presentation
 make all                        generate all files
@@ -39,7 +39,7 @@ PACKAGES = s~^[^%]*\\usepackage[^{]*{\([^}]*\)}.*$$~\1~p
 FILFILES = $(wildcard style/*.py)
 FILFILES += $(wildcard style/*.lua)
 FILTERS := $(foreach FILFILES, $(FILFILES), --filter $(FILFILES))
-TEXFLAGS = -F pandoc-crossref -F pandoc-citeproc --latex-engine=xelatex
+TEXFLAGS = -F pandoc-crossref -F pandoc-citeproc --pdf-engine=xelatex
 
 
 ifneq ("$(wildcard style/Makefile)","")
@@ -49,7 +49,7 @@ ifneq ("$(wildcard style/template.tex)","")
 	TEXTEMPLATE := "--template=style/template.tex"
 endif
 ifneq ("$(wildcard style/reference.docx)","")
-	DOCXTEMPLATE := "--reference-docx=style/reference.docx"
+	DOCXTEMPLATE := "--reference-doc=style/reference.docx"
 endif
 ifneq ("$(wildcard style/style.css)","")
 	CSS := "--include-in-header=style/style.css"
@@ -96,7 +96,6 @@ prepare:
 	command -v pandoc >/dev/null 2>&1 || { echo "I require pandoc but it's not installed.  Aborting." >&2; exit 1; }
 	command -v pandoc-crossref >/dev/null 2>&1 || { echo "I require pandoc-crossref but it's not installed.  Aborting." >&2; exit 1; }
 	command -v pandoc-citeproc >/dev/null 2>&1 || { echo "I require pandoc-citeproc but it's not installed.  Aborting." >&2; exit 1; }
-	command -v svn >/dev/null 2>&1 || { echo "I require svn but it's not installed.  Aborting." >&2; exit 1; }
 	mkdir "output"
 	mkdir "source"
 	mkdir "style"
@@ -104,6 +103,7 @@ prepare:
 	if [[ "$OSTYPE" == "darwin" ]]; then open source/00-metadata.md; else xdg-open source/00-metadata.md;fi
 
 fetch:
+	command -v svn >/dev/null 2>&1 || { echo "I require svn but it's not installed.  Aborting." >&2; exit 1; }
 	@echo "Trying to fetch the style directory from this github repo"
 	svn export $(THEME).git/trunk/style
 
