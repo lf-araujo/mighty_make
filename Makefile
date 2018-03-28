@@ -64,32 +64,32 @@ all : tex docx html5 epub pdf
 pdf: $(PDF)
 $(PDF): $(MD)
 	pandoc -o $@ source/*.md $(TEXTEMPLATE) $(TEXFLAGS) $(FILTERS) 2>output/pdf.log
-	if [[ "$OSTYPE" == "darwin" ]]; then open $@; else xdg-open $@;fi
+	if [[ "$OSTYPE" == "darwin*" ]]; then open $@; else xdg-open $@;fi
 
 tex: $(TEX)
 $(TEX): $(MD)
 	pandoc -o $@ source/*.md $(TEXFLAGS) 2>output/tex.log
-	if [[ "$OSTYPE" == "darwin" ]]; then open $@; else xdg-open $@;fi
+	if [[ "$OSTYPE" == "darwin*" ]]; then open $@; else xdg-open $@;fi
 
 docx: $(DOCX)
 $(DOCX): $(MD)
 	pandoc -o $@ source/*.md $(TEXFLAGS) $(DOCXTEMPLATE) --toc 2>output/docx.log
-	if [[ "$OSTYPE" == "darwin" ]]; then open $@; else xdg-open $@;fi
+	if [[ "$OSTYPE" == "darwin*" ]]; then open $@; else xdg-open $@;fi
 
 html5: $(HTML5)
 $(HTML5): $(MD)
 	pandoc -o $@ source/*.md $(CSS) $(TEXFLAGS) --toc -t html5 2>output/html5.log
-	if [[ "$OSTYPE" == "darwin" ]]; then open $@; else xdg-open $@;fi
+	if [[ "$OSTYPE" == "darwin*" ]]; then open $@; else xdg-open $@;fi
 
 epub: $(EPUB)
 $(EPUB): $(MD)
 	pandoc -o $@ source/*.md $(TEXFLAGS) --toc 2>output/epub.log
-	if [[ "$OSTYPE" == "darwin" ]]; then open $@; else xdg-open $@;fi
+	if [[ "$OSTYPE" == "darwin*" ]]; then open $@; else xdg-open $@;fi
 
 beamer: $(BEAMER)
 $(BEAMER): $(MD)
 	pandoc -o $@ source/*.md $(TEXFLAGS) -t beamer 2>output/beamer.log
-	if [[ "$OSTYPE" == "darwin" ]]; then open $@; else xdg-open $@;fi
+	if [[ "$OSTYPE" == "darwin*" ]]; then open $@; else xdg-open $@;fi
 
 prepare:
 	command -v xetex >/dev/null 2>&1 || { echo "Latex is not installed.  Please run make prepare-latex for a minimal installation." >&2; exit 1; }
@@ -100,7 +100,7 @@ prepare:
 	mkdir "source"
 	mkdir "style"
 	touch source/00-metadata.md
-	if [[ "$OSTYPE" == "darwin" ]]; then open source/00-metadata.md; else xdg-open source/00-metadata.md;fi
+	if [[ "$OSTYPE" == "darwin*" ]]; then open source/00-metadata.md; else xdg-open source/00-metadata.md;fi
 
 fetch:
 	command -v svn >/dev/null 2>&1 || { echo "I require svn but it's not installed.  Aborting." >&2; exit 1; }
