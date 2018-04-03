@@ -27,6 +27,7 @@ endef
 
 export INFORMATION
 
+SHELL = /bin/bash
 MD = $(wildcard source/*.md)
 PDF = output/$(notdir $(CURDIR)).pdf
 TEX = output/$(notdir $(CURDIR)).tex
@@ -44,16 +45,18 @@ TEXFLAGS = -F pandoc-crossref -F pandoc-citeproc --pdf-engine=xelatex
 
 ifneq ("$(wildcard style/Makefile)","")
 	include style/Makefile
-endif
-ifneq ("$(wildcard style/template.tex)","")
+else ifneq ("$(wildcard style/template.tex)","")
 	TEXTEMPLATE := "--template=style/template.tex"
-endif
-ifneq ("$(wildcard style/reference.docx)","")
+else ifneq ("$(wildcard style/reference.docx)","")
 	DOCXTEMPLATE := "--reference-doc=style/reference.docx"
-endif
-ifneq ("$(wildcard style/style.css)","")
+else  ifneq ("$(wildcard style/style.css)","")
 	CSS := "--include-in-header=style/style.css"
+else ifneq ($(wildcard linux*),$OSTYPE)
+	OPENWITH := "xdg-open"
+else ifneq ($(wildcard darwin*),$OSTYPE)
+	OPENWITH := "open"
 endif
+
 
 help:
 	@echo "$$INFORMATION"
@@ -64,32 +67,32 @@ all : tex docx html5 epub pdf
 pdf: $(PDF)
 $(PDF): $(MD)
 	pandoc -o $@ source/*.md $(TEXTEMPLATE) $(TEXFLAGS) $(FILTERS) 2>output/pdf.log
-	if [[ "$OSTYPE" == "darwin*" ]]; then open $@; else xdg-open $@;fi
+	$(OPENWITH)  $@
 
 tex: $(TEX)
 $(TEX): $(MD)
 	pandoc -o $@ source/*.md $(TEXFLAGS) 2>output/tex.log
-	if [[ "$OSTYPE" == "darwin*" ]]; then open $@; else xdg-open $@;fi
+	$(OPENWITH)  $@
 
 docx: $(DOCX)
 $(DOCX): $(MD)
 	pandoc -o $@ source/*.md $(TEXFLAGS) $(DOCXTEMPLATE) --toc 2>output/docx.log
-	if [[ "$OSTYPE" == "darwin*" ]]; then open $@; else xdg-open $@;fi
+	$(OPENWITH)  $@
 
 html5: $(HTML5)
 $(HTML5): $(MD)
 	pandoc -o $@ source/*.md $(CSS) $(TEXFLAGS) --toc -t html5 2>output/html5.log
-	if [[ "$OSTYPE" == "darwin*" ]]; then open $@; else xdg-open $@;fi
+	$(OPENWITH)  $@
 
 epub: $(EPUB)
 $(EPUB): $(MD)
 	pandoc -o $@ source/*.md $(TEXFLAGS) --toc 2>output/epub.log
-	if [[ "$OSTYPE" == "darwin*" ]]; then open $@; else xdg-open $@;fi
+	$(OPENWITH)  $@
 
 beamer: $(BEAMER)
 $(BEAMER): $(MD)
 	pandoc -o $@ source/*.md $(TEXFLAGS) -t beamer 2>output/beamer.log
-	if [[ "$OSTYPE" == "darwin*" ]]; then open $@; else xdg-open $@;fi
+	$(OPENWITH)  $@
 
 prepare:
 	command -v xetex >/dev/null 2>&1 || { echo "Latex is not installed.  Please run make prepare-latex for a minimal installation." >&2; exit 1; }
@@ -100,7 +103,7 @@ prepare:
 	mkdir "source"
 	mkdir "style"
 	touch source/00-metadata.md
-	if [[ "$OSTYPE" == "darwin*" ]]; then open source/00-metadata.md; else xdg-open source/00-metadata.md;fi
+	$(OPENWITH) source/00-metadata.md
 
 fetch:
 	command -v svn >/dev/null 2>&1 || { echo "I require svn but it's not installed.  Aborting." >&2; exit 1; }
