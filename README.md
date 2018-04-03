@@ -14,6 +14,18 @@ It reduces the time for text editing using LaTeX. It all starts with downloading
 wget http://tiny.cc/mighty_make -O Makefile
 ```
 
+The next time updating is needed, just run:
+
+```bash
+make update
+```
+
+or if you are following the testing branch:
+
+```bash
+make update-testing-branch
+```
+
 Now, some themes are baked in:
 
 ### Scientific report
