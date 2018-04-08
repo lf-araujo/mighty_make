@@ -36,6 +36,7 @@ HTML5 = output/$(notdir $(CURDIR)).html
 EPUB = output/$(notdir $(CURDIR)).epub
 BEAMER = output/$(notdir $(CURDIR))-presentation.pdf
 PACKAGES = s~^[^%]*\\usepackage[^{]*{\([^}]*\)}.*$$~\1~p
+OPENWITH := "open"
 
 FILFILES = $(wildcard style/*.py)
 FILFILES += $(wildcard style/*.lua)
@@ -52,9 +53,7 @@ else ifneq ("$(wildcard style/reference.docx)","")
 else  ifneq ("$(wildcard style/style.css)","")
 	CSS := "--include-in-header=style/style.css"
 else ifneq ($(wildcard linux*),$OSTYPE)
-	OPENWITH := "xdg-open"
-else ifneq ($(wildcard darwin*),$OSTYPE)
-	OPENWITH := "open"
+	OPENWITH := "xdg-"$(OPENWITH)
 endif
 
 
