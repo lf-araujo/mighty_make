@@ -3,7 +3,7 @@
 
 define INFORMATION
 Makefile for automated typography using pandoc.
-Version 1.6                       
+Version 1.7                       
 
 Usage:
 make prepare                    first time use, setting the directories
