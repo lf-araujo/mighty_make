@@ -11,7 +11,7 @@ make prepare-latex              create a minimal latex install
 make dependencies               tries to fetch all included packages in the project and install them
 make html                       generate a web version
 make pdf                        generate a PDF file
-make docx                        generate a Docx file 			  
+make docx                       generate a Docx file 			  
 make tex                        generate a Latex file
 make beamer                     generate a beamer presentation
 make all                        generate all files
@@ -27,7 +27,10 @@ endef
 
 export INFORMATION
 
+<<<<<<< HEAD
 SHELL = /bin/bash
+=======
+>>>>>>> master
 MD = $(wildcard source/*.md)
 PDF = output/$(notdir $(CURDIR)).pdf
 TEX = output/$(notdir $(CURDIR)).tex
@@ -36,7 +39,10 @@ HTML5 = output/$(notdir $(CURDIR)).html
 EPUB = output/$(notdir $(CURDIR)).epub
 BEAMER = output/$(notdir $(CURDIR))-presentation.pdf
 PACKAGES = s~^[^%]*\\usepackage[^{]*{\([^}]*\)}.*$$~\1~p
+<<<<<<< HEAD
 OPENWITH := "open"
+=======
+>>>>>>> master
 
 FILFILES = $(wildcard style/*.py)
 FILFILES += $(wildcard style/*.lua)
@@ -44,9 +50,17 @@ FILTERS := $(foreach FILFILES, $(FILFILES), --filter $(FILFILES))
 TEXFLAGS = -F pandoc-crossref -F pandoc-citeproc --pdf-engine=xelatex
 
 
+<<<<<<< HEAD
 ifneq ("$(wildcard style/Makefile)","")
 	include style/Makefile
 else ifneq ("$(wildcard style/template.tex)","")
+=======
+
+ifneq ("$(wildcard style/Makefile)","")
+	include style/Makefile
+endif
+ifneq ("$(wildcard style/template.tex)","")
+>>>>>>> master
 	TEXTEMPLATE := "--template=style/template.tex"
 else ifneq ("$(wildcard style/reference.docx)","")
 	DOCXTEMPLATE := "--reference-doc=style/reference.docx"
@@ -56,7 +70,10 @@ else ifneq ($(wildcard linux*),$OSTYPE)
 	OPENWITH := "xdg-"$(OPENWITH)
 endif
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 help:
 	@echo "$$INFORMATION"
 
@@ -98,14 +115,21 @@ prepare:
 	command -v pandoc >/dev/null 2>&1 || { echo "I require pandoc but it's not installed.  Aborting." >&2; exit 1; }
 	command -v pandoc-crossref >/dev/null 2>&1 || { echo "I require pandoc-crossref but it's not installed.  Aborting." >&2; exit 1; }
 	command -v pandoc-citeproc >/dev/null 2>&1 || { echo "I require pandoc-citeproc but it's not installed.  Aborting." >&2; exit 1; }
+	command -v svn >/dev/null 2>&1 || { echo "I require svn but it's not installed.  Aborting." >&2; exit 1; }
 	mkdir "output"
 	mkdir "source"
 	mkdir "style"
 	touch source/00-metadata.md
+<<<<<<< HEAD
 	$(OPENWITH) source/00-metadata.md
 
 fetch:
 	command -v svn >/dev/null 2>&1 || { echo "I require svn but it's not installed.  Aborting." >&2; exit 1; }
+=======
+	if [[ "$OSTYPE" == "darwin" ]]; then open source/00-metadata.md; else xdg-open source/00-metadata.md;fi
+
+fetch:
+>>>>>>> master
 	@echo "Trying to fetch the style directory from this github repo"
 	svn export $(THEME).git/trunk/style
 
@@ -133,7 +157,11 @@ prepare-latex:
 	@echo "It's done. Use <tlmgr install PACKAGENAME> to install the packages you need."
 
 dependencies:
+<<<<<<< HEAD
 	pkexec /opt/texbin/tlmgr install $$(cat source/*.md | sed -n '$(PACKAGES)' | paste -sd ' ' -) $$(cat style/*.tex | sed -n '$(PACKAGES)' | paste -sd ' ' -)
+=======
+	pkexec tlmgr install $$(cat source/*.md | sed -n '$(PACKAGES)' | paste -sd ' ' -) $$(cat style/*.tex | sed -n '$(PACKAGES)' | paste -sd ' ' -)
+>>>>>>> master
 
 update:
 	wget http://tiny.cc/mighty_make -O Makefile
