@@ -38,8 +38,6 @@ EPUB = output/$(notdir $(CURDIR)).epub
 BEAMER = output/$(notdir $(CURDIR))-presentation.pdf
 PACKAGES = s~^[^%]*\\usepackage[^{]*{\([^}]*\)}.*$$~\1~p
 
-OPENWITH := "open"
-
 
 FILFILES = $(wildcard style/*.py)
 FILFILES += $(wildcard style/*.lua)
@@ -55,8 +53,6 @@ else ifneq ("$(wildcard style/reference.docx)","")
 	DOCXTEMPLATE := "--reference-doc=style/reference.docx"
 else  ifneq ("$(wildcard style/style.css)","")
 	CSS := "--include-in-header=style/style.css"
-else ifneq ($(wildcard linux*),$OSTYPE)
-	OPENWITH := "xdg-"$(OPENWITH)
 endif
 
 
@@ -69,32 +65,26 @@ all : tex docx html5 epub pdf
 pdf: $(PDF)
 $(PDF): $(MD)
 	pandoc -o $@ source/*.md $(TEXTEMPLATE) $(TEXFLAGS) $(FILTERS) 2>output/pdf.log
-	$(OPENWITH)  $@
 
 tex: $(TEX)
 $(TEX): $(MD)
 	pandoc -o $@ source/*.md $(TEXFLAGS) 2>output/tex.log
-	$(OPENWITH)  $@
 
 docx: $(DOCX)
 $(DOCX): $(MD)
 	pandoc -o $@ source/*.md $(TEXFLAGS) $(DOCXTEMPLATE) --toc 2>output/docx.log
-	$(OPENWITH)  $@
 
 html5: $(HTML5)
 $(HTML5): $(MD)
 	pandoc -o $@ source/*.md $(CSS) $(TEXFLAGS) --toc -t html5 2>output/html5.log
-	$(OPENWITH)  $@
 
 epub: $(EPUB)
 $(EPUB): $(MD)
 	pandoc -o $@ source/*.md $(TEXFLAGS) --toc 2>output/epub.log
-	$(OPENWITH)  $@
 
 beamer: $(BEAMER)
 $(BEAMER): $(MD)
 	pandoc -o $@ source/*.md $(TEXFLAGS) -t beamer 2>output/beamer.log
-	$(OPENWITH)  $@
 
 prepare:
 	command -v xetex >/dev/null 2>&1 || { echo "Latex is not installed.  Please run make prepare-latex for a minimal installation." >&2; exit 1; }
@@ -106,7 +96,6 @@ prepare:
 	mkdir "source"
 	mkdir "style"
 	touch source/00-metadata.md
-	$(OPENWITH) source/00-metadata.md
 
 fetch:
 	command -v svn >/dev/null 2>&1 || { echo "I require svn but it's not installed.  Aborting." >&2; exit 1; }
