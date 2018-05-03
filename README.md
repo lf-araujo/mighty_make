@@ -123,11 +123,7 @@ make prepare-latex              create a minimal latex install
 make dependencies               tries to fetch all included packages in the project and install them
 make html                       generate a web version
 make pdf                        generate a PDF file
-<<<<<<< HEAD
 make docx                       generate a Docx file              
-=======
-make docx                       generate a Docx file 			  
->>>>>>> master
 make tex                        generate a Latex file
 make beamer                     generate a beamer presentation
 make all                        generate all files
