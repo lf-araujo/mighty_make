@@ -139,25 +139,3 @@ clean:
 	rm -f "output/" *.md *.html *.pdf *.tex *.docx *.epub
 
 .PHONY: help prepare update beamer clean
-tory /tmp \
-	--file /tmp/install-tl-unx.tar.gz
-
-	pkexec /tmp/install-tl-*/install-tl \
-	-repository http://mirror.ctan.org/systems/texlive/tlnet \
-	-no-gui \
-	-scheme scheme-minimal
-	@echo "It's done. Use <tlmgr install PACKAGENAME> to install the packages you need."
-
-dependencies:
-	pkexec tlmgr install $$(cat source/*.md | sed -n '$(PACKAGES)' | paste -sd ' ' -) $$(cat style/*.tex | sed -n '$(PACKAGES)' | paste -sd ' ' -)
-
-update:
-	wget http://tiny.cc/mighty_make -O Makefile
-
-update-testing-branch:
-	wget http://tiny.cc/mighty_test -O Makefile
-
-clean:
-	rm -f "output/" *.md *.html *.pdf *.tex *.docx *.epub
-
-.PHONY: help prepare update beamer clean
