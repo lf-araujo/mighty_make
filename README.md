@@ -4,10 +4,9 @@
 - [ ] Make an output md file with citations added to the yaml header, so to facilitate sharing the document with coworkers
 - [ ] Windows testing
 - [ ] Lose the subversion dependence
-<<<<<<< HEAD
 - [ ] Fix a bug where the $PATH is not linked using make prepare-latex (need help here)
-=======
->>>>>>> master
+- [ ] Automatic installation of pp, pandoc-citeproc and pandoc-crossref (perhaps pandoc itself?) (need help here)
+
 
 ## Uses
 
@@ -17,7 +16,6 @@ It reduces the time for text editing using LaTeX. It all starts with downloading
 wget http://tiny.cc/mighty_make -O Makefile
 ```
 
-<<<<<<< HEAD
 The next time updating is needed, just run:
 
 ```bash
@@ -30,8 +28,6 @@ or if you are following the testing branch:
 make update-testing-branch
 ```
 
-=======
->>>>>>> master
 Now, some themes are baked in:
 
 ### Scientific report
@@ -141,11 +137,7 @@ make update-testing-branch      update to latest testing version
 make                            will fallback to PDF
 
 It implies some directories in the filesystem: source, output and style
-<<<<<<< HEAD
 It also implies that the bibliography file will be defined via the yaml   
-=======
-It also implies that the bibliography file will be defined via the yaml	  
->>>>>>> master
 Depends on pandoc-citeproc and pandoc-crossref
 ```
 
